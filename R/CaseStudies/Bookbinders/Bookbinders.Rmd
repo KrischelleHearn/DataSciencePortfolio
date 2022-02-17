@@ -1,0 +1,194 @@
+---
+title: "Bookbinders Case Study"
+author: "Krischelle Joyner"
+date: "9/28/2021"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readxl); library(caret); library(e1071)
+```
+
+Importing train and test data sets
+
+```{r}
+BBBC_Train = read_excel("C:/Users/Krischelle/Documents/Krischelles most important stuff/Publish/Books and Learning/UTSA/Fall 2021 Classes/Data Analytics Applications/Case Studies/Bookbinders Case Study/BBBC-Train.xlsx")
+
+BBBC_Test =  read_excel("C:/Users/Krischelle/Documents/Krischelles most important stuff/Publish/Books and Learning/UTSA/Fall 2021 Classes/Data Analytics Applications/Case Studies/Bookbinders Case Study/BBBC-Test.xlsx")
+```
+
+Looking at the data beforehand, we can already see the first column, `Observation`, is just the observation row number and should be removed.
+
+```{r}
+BBBC_Train = BBBC_Train[2:12]
+BBBC_Test = BBBC_Test[2:12]
+```
+
+Checking correlation among variables in train data set
+
+```{r}
+cor(BBBC_Train)
+pairs(BBBC_Train)
+```
+
+Looks like there is some correlation between `Last_purchase` and `First_purchase`. Knowing when the last purchase of a customer was seems more important than when the first purchase was so we'll remove `First_purchase` from the data.
+
+```{r}
+BBBC_Train = BBBC_Train[c(1:5, 7:11)]
+BBBC_Test = BBBC_Test[c(1:5, 7:11)]
+```
+
+Verifying correlation issue has been solved
+
+```{r}
+cor(BBBC_Train)
+pairs(BBBC_Train)
+```
+
+Checking structure of train and test data sets
+
+```{r}
+str(BBBC_Train)
+```
+
+Checking for missing data
+
+```{r}
+anyNA(BBBC_Train)
+anyNA(BBBC_Test)
+```
+
+Based on the description of the data, `Choice` and `Gender` variables are binary and should be changed from numerical to factor.
+
+```{r}
+BBBC_Train$Choice = as.factor(BBBC_Train$Choice)
+BBBC_Train$Gender = as.factor(BBBC_Train$Gender)
+BBBC_Test$Choice = as.factor(BBBC_Test$Choice)
+BBBC_Test$Gender = as.factor(BBBC_Test$Gender)
+```
+
+Validating change to factor
+
+```{r}
+str(BBBC_Train)
+str(BBBC_Test)
+```
+
+Addressing unbalanced data
+
+```{r}
+summary(BBBC_Train$Choice)
+```
+
+Creating balanced data for train data set
+
+```{r}
+set.seed(123)
+BBBC_Train.F = which(BBBC_Train$Choice == "0")
+BBBC_Train.M.index = which(BBBC_Train$Choice == "1")
+BBBC_Train.F.index = sample(BBBC_Train.F, 400)
+
+BBBC_Train.F2 = BBBC_Train[BBBC_Train.F.index, ]
+BBBC_Train.M2 = BBBC_Train[BBBC_Train.M.index, ]
+
+BBBC_Train.Bal = rbind(BBBC_Train.F2, BBBC_Train.M2)
+
+summary(BBBC_Train.Bal$Choice)
+```
+
+Training Logistic model with all variables using balanced training data set
+
+```{r}
+logit.m1 = glm(Choice ~ ., data = BBBC_Train.Bal, family = binomial)
+summary(logit.m1)
+```
+
+With an alpha of 0.05, all variables are significant. Next, we'll create predicted probabilities using the test data set, convert the probabilities to binary responses, and create confusion matrix to check accuracy.
+
+```{r}
+logit.pred = predict(logit.m1, newdata = BBBC_Test, type = "response")
+logit.pred.class = ifelse(logit.pred >= 0.5, 1, 0)
+caret::confusionMatrix(as.factor(logit.pred.class), BBBC_Test$Choice)
+```
+
+Accuracy score for Logistic model is 75.04%. Sensitivity is 75.48% and specificity is 70.59%.
+
+
+Training Linear Regression model with all variables using balanced training data set
+
+```{r}
+lm.m1 = lm(as.numeric(Choice) ~ ., data = BBBC_Train.Bal)
+summary(lm.m1)
+```
+
+With an alpha of 0.05, all variables are significant. Next, we'll create predicted probabilities using the test data set, convert the probabilities to binary responses, and create confusion matrix to check accuracy.
+
+```{r}
+lm.pred = predict(lm.m1, newdata = BBBC_Test, type = "response")
+lm.pred.class = ifelse(lm.pred >= 1.5, 1, 0)
+caret::confusionMatrix(as.factor(lm.pred.class), BBBC_Test$Choice)
+```
+
+Accuracy score for Linear Regression model is 75.57%. Sensitivity is 76.15% and specificity is 69.61%.
+
+
+Training Support Vector Machine model with all variables using balanced training data set
+
+```{r}
+svm.tuned = tune.svm(Choice ~ ., data = BBBC_Train.Bal, gamma = seq(0.01, 0.1, by = .01), cost = seq(0.1, 1, by = 0.1))
+
+svm.m1 = svm(Choice ~ ., data = BBBC_Train.Bal, gamma = svm.tuned$best.parameters$gamma, cost = svm.tuned$best.parameters$cost)
+summary(svm.m1)
+```
+
+Next, we'll create predicted probabilities using the test data set, convert the probabilities to binary responses, and create confusion matrix to check accuracy.
+
+```{r}
+svm.pred = predict(svm.m1, BBBC_Test, type = "response")
+caret::confusionMatrix(as.factor(svm.pred), BBBC_Test$Choice)
+```
+
+Accuracy score for SVM model is 74.96%. Sensitivity is 75.38% and specificity is 70.59%.
+
+
+Training Logistic Regression model with all variables using balanced training data set with 5-fold cross-validation
+
+```{r}
+train_ctrl = trainControl(method = "cv", number = 5)
+
+logit.m2 = train(Choice ~ ., data = BBBC_Train.Bal, method = "glm", trControl = train_ctrl)
+summary(logit.m2)
+```
+
+With an alpha of 0.05, all variables are significant. Next, we'll create predicted probabilities using the test data set, convert the probabilities to binary responses, and create confusion matrix to check accuracy.
+
+```{r}
+logit.pred2 = predict(logit.m2, newdata = BBBC_Test)
+caret::confusionMatrix(logit.pred2, BBBC_Test$Choice)
+```
+
+Accuracy score for Logistic model is 75.04%. Sensitivity is 75.48% and specificity is 70.59%.
+
+
+Training Logistic Regression model with all variables using balanced training data set with 5-fold repeated cross-validation
+
+```{r}
+train_ctrl2 = trainControl(method = "repeatedcv", number = 5)
+
+logit.m3 = train(Choice ~ ., data = BBBC_Train.Bal, method = "glm", trControl = train_ctrl2)
+summary(logit.m3)
+```
+
+With an alpha of 0.05, all variables are significant. Next, we'll create predicted probabilities using the test data set, convert the probabilities to binary responses, and create confusion matrix to check accuracy.
+
+```{r}
+logit.pred3 = predict(logit.m3, newdata = BBBC_Test)
+caret::confusionMatrix(logit.pred3, BBBC_Test$Choice)
+```
+
+Accuracy score for Logistic model is 75.04%. Sensitivity is 75.48% and specificity is 70.59%.
+
+
