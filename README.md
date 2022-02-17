@@ -6,4 +6,4 @@ Here you can find everything that I have worked on over the years related to Dat
 * Data Analytics Visualizations
 * Tableau Dashboards
 * Case Studies
-* Launguages: R, SAS, Python
+* Languages: R, SAS, Python
