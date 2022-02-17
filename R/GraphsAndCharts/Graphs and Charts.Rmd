@@ -1,0 +1,137 @@
+---
+title: "Homework 1"
+author: "Krischelle Joyner"
+date: "`r sys.Date()"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(tidyverse)
+library(ggthemes)
+
+theme_set(theme_minimal())
+
+```
+
+
+
+In this homework, you will use `diamonds` data set from `ggplot2` package. It is automatically loaded when you execute `library(ggplot2)` so you don't have to separately load it. Please create a duplicate of `diamonds` and use that for homework. This will avoid corrupting the original data set.
+
+Make sure that you understand the variables in the data by checking the help file by executing `help(diamonds)` in the console. The data has five variables that measure the dimensions. 
+
+## Instructions
+
+1. You are expected to recreate each plot **exactly** as shown in this homework.
+2. The objective of this homework is to help you develop fine grain control over `ggplot2`. As such, please refrain from exercising artistic freedom!
+3. All the plots use `theme_minimal()`. You can set this as your default theme by adding this line in the `setup` chunk **after** you load `ggplot2` library:
+`theme_set(theme_minimal())`
+
+
+## Q1 (3 points)
+
+Recreate the following graph. The parameter that controls transparency is set at 0.3. You need not get exactly the same colors but they must be **discrete** and should not follow a color gradient.
+
+
+```{r Q1}
+ggplot(diamonds, aes(carat,price)) +
+  geom_point(aes(fill = as.character(clarity)),
+             color = "black",
+             alpha = 0.3,
+             shape = 21,
+             size = 1.5) +
+  labs(title = "Scatterplot of Diamond Prices", x = "Diamond Carats", y = "Diamond Price") + 
+  scale_y_continuous(labels = scales::dollar_format(prefix = "$"))
+```
+
+
+## Q2 (2 points)
+
+The previous graph looks cluttered. So you decided to use facets instead. Recreate the following graph:
+
+
+```{r Q2}
+ggplot(diamonds, aes(carat, price)) +
+       geom_point(alpha = 0.3, aes(fill = as.character(clarity)), color = "black", shape = 21, size = 1.5,                            show.legend = FALSE) +
+       labs(x = "Diamond Carats", y = "Diamond Price", 
+       title = "Scatterplot of Diamond Prices") +
+       scale_y_continuous(labels = scales::dollar_format(prefix = "$")) +
+       facet_wrap(~ clarity, ncol = 4)
+```
+
+##Q3 (5 points)
+
+Next, you want to know whether the price of diamonds depends on table and depth. Note the line types. Recreate the following graphs:
+
+
+```{r Q3.1, message=FALSE}
+ggplot(diamonds, aes(table, price)) +
+       geom_smooth(method = "lm", color = "red", linetype = "dashed") +
+       labs(x = "Table", y = "Price") +
+       scale_x_continuous(limits = c(0,100),
+                          breaks = c(0, 25, 50, 75, 100))
+
+```
+
+
+
+```{r Q3.2, message=FALSE}
+ggplot(diamonds,aes(depth, price)) +
+       geom_smooth(method = "lm", color = "white", linetype = "dotdash") +
+       labs(x = "Depth", y = "Price") +
+       scale_x_continuous(limits = c(0,80),
+                          breaks = c(0, 10, 20, 30, 40, 50, 60, 70, 80))
+```
+
+
+
+## Q4 (5 points)
+
+Recreate each of the following graphs for data exploration:
+
+
+```{r Q5.1, message=FALSE}
+ggplot(diamonds, aes(x*y*z, price)) +
+geom_point(aes(color = cut)) +
+scale_color_manual(values=c("#99B898", "#FECEAB", "#FF847C", "#E84A5F", "#2A363B"))
+
+       
+```
+
+
+```{r Q5.2}
+ggplot(diamonds,aes(x = price)) +
+       geom_histogram(bins = 75, col="white") +
+       scale_y_continuous(labels = scales::comma_format()) +
+       scale_x_continuous(labels = scales::dollar_format(prefix = "$")) 
+       
+
+```
+
+
+
+```{r Q5.3}
+ggplot(diamonds, aes(clarity, fill = clarity)) +
+geom_bar(color = "red", show.legend = FALSE) 
+       
+```
+
+
+
+```{r Q5.4}
+ggplot(diamonds,aes(cut, depth)) +
+geom_violin(color = "blue") +
+geom_jitter(color = "red", alpha = 0.03)
+```
+
+
+```{r Q5.5, message=FALSE}
+ggplot(diamonds, aes(x, price)) +
+geom_smooth(method = "lm", color = "green") +
+geom_smooth (color = "blue", se =FALSE)      
+       
+
+```
+
+
