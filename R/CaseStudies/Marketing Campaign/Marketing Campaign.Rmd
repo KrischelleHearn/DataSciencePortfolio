@@ -1,0 +1,218 @@
+---
+title: "STA 6543 Final Project"
+author: "Krischelle Joyner"
+date: "8/8/2021"
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+## Background  
+A national veterans’ organization wishes to develop a predictive model to improve the cost-effectiveness of their direct marketing campaign. The organization, with its in-house database of over 13 million donors, is one of the largest direct-mail fundraisers in the United States. According to their recent mailing records, the overall response rate is 5.1%. Out of those who responded (donated), the average donation is \$13.00. Each mailing, which includes a gift of personalized address labels and assortments of cards and envelopes, costs $0.68 to produce and send. Using these facts, we take a sample of this dataset to develop a classification model that can effectively capture donors so that the expected net profit is maximized. Weighted sampling was used, under-representing the non-responders so that the sample has equal numbers of donors and non-donors.  
+
+
+## Business Objectives and Goals  
+Find a classification model that targets donors to gain a higher return on investment. This model will be used in the next donation campaign.  
+
+## Data Sources and Data used:
+```{r}
+#install.packages("pacman")
+pacman::p_load('ISLR', 'corrgram', 'glmnet', 'pls', 'tidyverse', 'ggthemes', 'ggthemr', 'caret', 'modelr', 'leaps', 'psych', 'pastecs', 'e1071', 'randomForest', 'gbm', 'ROCR', 'recipes', 'broom', 'scales', 'outliers', 'MASS', 'VIF')
+
+set.seed(12345)
+```
+
+
+The key to overcoming classification problems is the use of weighted samples. Otherwise, the disparity in frequency of observed classes can have a significant negative impact on model fitting. A random sample can be biased if there are a lot of non-responders, so we should use a weighted sampling to avoid this. Otherwise, we would have inaccurate results.
+
+
+## Exclusions:  
+
+```{r}
+f1 <- read_rds("fundraising.rds")
+future_fundraising <- read_rds("future_fundraising.rds")
+```
+
+```{r}
+any(is.na(f1))
+```
+```{r}
+any(is.na(future_fundraising))
+```
+Since there weren't any missing values, we did not exclude any data.  
+
+## Variable transformations: 
+Due to some fields having zeros as the minimum value, it would be best to apply sqrt transformations to them and log transforms to the ones that do not include any 0's.The application of transformations seems useful, especially to predictors that will go into the final model. Ideally, some imputation should have been applied for these predictors. However, I did not do any transforms in my model.  
+
+## Type of Analysis performed: what, why, findings.
+
+**Exploratory Data Analysis:**  
+
+```{r}
+summary(f1)
+```
+```{r}
+corr_1 <- (f1[,c(6:7,9:21)])
+corr_1$target <- as.numeric(corr_1$target)
+```
+
+
+```{r}
+pairs(f1[5:13])
+pairs(f1[14:21])
+```
+
+**Positive Correlation:** There seems to be a positive correlation between home_value and med_fam_inc. There also seems to be a positive correlation between med_fam_inc and avg_fam_inc. Lastly, there seems to be a positive correlation between home_value and avg_fam_inc.
+                        
+**Negative Correlation:** We see a negative correlation between med_fam_inc and pct_lt15k. We also see a negative correlation between avg_fam_inc and pct_lt15k.  
+
+
+
+```{r}
+library(VIF)
+vif(as.data.frame(corr_1))
+```
+
+## Methodology used, background, benefits:
+
+From the company background we know the average donation to the national veterans organization is \$13.00, and the average cost of supplies is $0.68. We are also given that approximately 50% of the data is 'Donors' and 50% is 'Non-donors'. Given these facts, we can calculate the maximum return on investment for the test set. 
+
+(13.00\*299)-(0.68*300) = $3,683
+
+So we can see that the maximum return on investment is $3,683.
+
+
+```{r}
+D <- 299
+ND <- 300
+(13.00 * D)-(0.68 * ND)
+```
+
+```{r}
+training <- createDataPartition(f1$target,p=.8,list=FALSE)
+train_data <- f1[training,]
+test_data <- f1[-training,]
+nrow(train_data)
+
+train_control <- trainControl(method="repeatedcv",number=10,repeats=3)
+```
+
+```{r}
+corrgram(train_data, upper.panel=panel.cor, main="Doner Correlation Matrix")
+```
+
+We ran the correlation matrix to see which variables are highly correlated. We found that the following are highly correlated:
+med_fam_inc, home_value, avg_fam_inc, pct_lt15k, lifetime_gifts, last_gift, avg_gift.   
+
+## LDA  
+We used LDA or Linear Discriminant Analysis which assumes the feature covariance matrices of both classes are the same resulting in a linear decision boundary. This LDA model uses all 20 variables.
+
+```{r}
+library(caret)
+lda.fit = train(target~., data=train_data, method='lda',trControl = train_control)
+
+pred.lda <- predict(lda.fit,test_data)
+
+confusionMatrix(pred.lda,test_data$target)
+```
+We can see from the confusion matrix that there are a total of 174 Donors and 153 Non Donors. The test accuracy is 54.59%. 
+
+
+```{r}
+D <- 174
+ND <- 153
+(13.00 * D)-(0.68 * ND)
+```
+The return on investment for LDA 1 is $2,157.96.  
+
+
+## Let's look at 10 of the 20 variables for a second LDA analysis: 
+
+```{r}
+##Train Model
+lda.fit2=train(target~ avg_gift + lifetime_gifts + med_fam_inc + avg_fam_inc + home_value + num_prom + pct_lt15k + months_since_donate + time_lag + last_gift, data=train_data, method='lda',trControl = train_control)
+##Calculate Predictions
+pred.lda2<-predict(lda.fit2,test_data)
+##Estimate Accuracy
+confusionMatrix(pred.lda2,test_data$target)
+```
+We can see from the confusion matrix that there are a total of 174 Donors and 153 Non Donors. The test accuracy is 52.25%.    
+
+```{r}
+D2 <- 171
+ND2 <- 142
+(13.00 * D2)-(0.68 * ND2)
+```
+The return on investment for LDA 2 is $2,126.44.  
+
+
+## QDA  
+We used QDA or Quadratic Discriminant Analysis which allows different feature covariance matrices for different classes, which leads to a quadratic decision boundary. This QDA model uses all 20 variables.
+
+```{r}
+qda.fit = train(target~ homeowner +  num_child + income + female + home_value + med_fam_inc + avg_fam_inc + pct_lt15k + num_prom + lifetime_gifts + largest_gift + last_gift + months_since_donate + time_lag + avg_gift, data=train_data, method='qda',trControl = train_control)
+
+pred.qda <- predict(qda.fit,test_data)
+
+confusionMatrix(pred.qda,test_data$target)
+```
+
+We can see from the confusion matrix that there are a total of 227 Donors and 86 Non Donors. The test accuracy is 52.25%.  
+
+
+```{r}
+D3 <- 227
+ND3 <- 86
+(13.00 * D3)-(0.68 * ND3)
+```
+The return on investment for LDA 1 is $2,892.52.    
+
+
+## Let's look at 10 of the 20 variables for a second QDA analysis: 
+
+
+```{r}
+##Train Model
+qda.fit2 = train(target~ avg_gift + lifetime_gifts + med_fam_inc + avg_fam_inc + home_value + num_prom + pct_lt15k + months_since_donate + time_lag + last_gift, data=train_data, method='qda',trControl = train_control)
+##Calculate Predictions
+pred.qda2<-predict(qda.fit2,test_data)
+##Estimate Accuracy
+confusionMatrix(pred.qda2,test_data$target)
+```
+
+We can see from the confusion matrix that there are a total of 174 Donors and 153 Non Donors. The test accuracy is 53.09%.     
+
+```{r}
+D4 <- 201
+ND4 <- 117
+(13.00 * D4)-(0.68 * ND4)
+```
+The return on investment for LDA 2 is $2,533.44. 
+
+## Model performance and Validation Results:
+We used the LDA and QDA classification models to training and validation. The model performance can be based on the two following factors: 
+
+Accuracy  (Showing Top 2)
+-LDA 1 with 54.59 accuracy rate. 
+-QDA 2 with 53.09 accuracy rate.
+
+Return on Investment (Showing Top 2)
+-QDA 1 with an ROI of $2,892.52.
+-QDA 2 with an ROI of $2,533.44.
+
+
+## Cut-Off Analysis:  
+Due to the weighted sampling, we didn't use ROC curves and AUC when adjusting the threshold. The threshold is calculated using a default threshold or cutoff of 0.5.
+
+## Recommendations:  
+Our recommendation is to use the QDA 2 model, as it has the second highest ROI projection and the second highest accuracy rate based on the top two models in each category. Lastly, the models presented still have room for improvement; we suggest adding additional variables in the next campaign to allow ROI to continue to grow. These new variables like social media, could help to further target our audience. 
+
+
+
+
+
