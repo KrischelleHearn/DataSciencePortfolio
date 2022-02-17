@@ -1,0 +1,3907 @@
+From: "Saved by Internet Explorer 11"
+Subject: SAS Output
+Date: Wed, 28 Jul 2021 21:58:46 -0500
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Users\tuu544\AppData\Local\Temp\18\SAS Temporary Files\_TD21820_HORRDS13_\sashtml.htm
+X-MimeOLE: Produced By Microsoft MimeOLE
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><META content=3D"IE=3D5.0000" =
+http-equiv=3D"X-UA-Compatible">
+<TITLE>SAS Output</TITLE>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001">
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-type>
+<STYLE type=3Dtext/css>.accessiblecaption {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.activelink {
+	COLOR: #800080
+}
+.aftercaption {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; PADDING-TOP: 4pt; =
+BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.batch {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 1px solid; FONT-FAMILY: 'SAS =
+Monospace', 'Courier New', Courier, monospace; BORDER-RIGHT: #c1c1c1 1px =
+solid; BORDER-COLLAPSE: separate; BORDER-BOTTOM: #c1c1c1 1px solid; =
+FONT-WEIGHT: normal; COLOR: #000000; PADDING-BOTTOM: 7px; FONT-STYLE: =
+normal; PADDING-TOP: 7px; PADDING-LEFT: 7px; BORDER-SPACING: 1px; =
+BORDER-LEFT: #c1c1c1 1px solid; PADDING-RIGHT: 7px; BACKGROUND-COLOR: =
+#fafbfe
+}
+.beforecaption {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: =
+0px; BACKGROUND-COLOR: #fafbfe
+}
+.body {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; MARGIN-LEFT: =
+8px; BACKGROUND-COLOR: #fafbfe; MARGIN-RIGHT: 8px
+}
+.bodydate {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+WIDTH: 100%; VERTICAL-ALIGN: top; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; TEXT-ALIGN: right; BORDER-SPACING: 0px; =
+BACKGROUND-COLOR: #fafbfe
+}
+.bycontentfolder {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany =
+AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: =
+normal; MARGIN-LEFT: 6pt
+}
+.byline {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: =
+0px; BACKGROUND-COLOR: #fafbfe
+}
+.bylinecontainer {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; WIDTH: =
+100%; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: normal; COLOR: =
+#000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #000000 =
+0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.caption {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BORDER-SPACING: =
+0px; BACKGROUND-COLOR: #fafbfe
+}
+.cell {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.container {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.contentfolder {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany =
+AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: =
+normal; MARGIN-LEFT: 6pt
+}
+.contentitem {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany =
+AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: =
+normal; MARGIN-LEFT: 6pt
+}
+.contentproclabel {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.contentprocname {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.contents {
+	LIST-STYLE-TYPE: decimal; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; MARGIN-LEFT: 8px; BACKGROUND-COLOR: #fafbfe; =
+MARGIN-RIGHT: 8px
+}
+.contentsdate {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+WIDTH: 100%; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.contenttitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: italic; BACKGROUND-COLOR: =
+#fafbfe
+}
+.continued {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+WIDTH: 100%; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; =
+BORDER-SPACING: 0px; BACKGROUND-COLOR: #fafbfe
+}
+.data {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; =
+BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: =
+normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.dataemphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; =
+BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: =
+normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.dataemphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: =
+'Courier New', Courier, monospace; BORDER-RIGHT: #c1c1c1 1px solid; =
+BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: =
+italic; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.dataempty {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; =
+BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: =
+normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.datafixed {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: =
+'Courier New', Courier; BORDER-RIGHT: #c1c1c1 1px solid; BORDER-BOTTOM: =
+#c1c1c1 1px solid; FONT-WEIGHT: normal; FONT-STYLE: normal; BORDER-LEFT: =
+#c1c1c1 0px solid; BACKGROUND-COLOR: #ffffff
+}
+.datastrong {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; =
+BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: bold; COLOR: #000000; =
+FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: =
+#ffffff
+}
+.datastrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: =
+'Courier New', Courier, monospace; BORDER-RIGHT: #c1c1c1 1px solid; =
+BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: bold; COLOR: #000000; =
+FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: =
+#ffffff
+}
+.date {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+WIDTH: 100%; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.document {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+A:link {
+	COLOR: #0000ff
+}
+A:visited {
+	COLOR: #800080
+}
+A:active {
+	COLOR: #800080
+}
+.errorbanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.errorcontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.errorcontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: =
+normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.extendedpage {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 1pt solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 1pt solid; =
+BORDER-BOTTOM: #000000 1pt solid; FONT-WEIGHT: normal; COLOR: #112277; =
+FONT-STYLE: italic; TEXT-ALIGN: center; BORDER-LEFT: #000000 1pt solid; =
+BACKGROUND-COLOR: #fafbfe
+}
+.fatalbanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.fatalcontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.fatalcontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: =
+normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.folderaction {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany =
+AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: =
+normal; MARGIN-LEFT: 6pt
+}
+.footer {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.footeremphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; =
+FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.footeremphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: =
+'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; =
+FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.footerempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.footerfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: =
+'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: =
+#b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: =
+normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.footerstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.footerstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: =
+'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.frame {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.graph {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 1px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; =
+BORDER-COLLAPSE: separate; BORDER-BOTTOM: #c1c1c1 1px solid; =
+FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: =
+1px; BORDER-LEFT: #c1c1c1 1px solid; BACKGROUND-COLOR: #fafbfe
+}
+.header {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.headeremphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#d8dbd3
+}
+.headeremphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: =
+'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#d8dbd3
+}
+.headerempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.headerfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: =
+'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: =
+#b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: =
+normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.headersandfooters {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #000000; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#edf2f9
+}
+.headerstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #000000; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#d8dbd3
+}
+.headerstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: =
+'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #000000; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#d8dbd3
+}
+.heading1 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.heading2 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.heading3 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.heading4 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.heading5 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.heading6 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.index {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.indexaction {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany =
+AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: =
+normal; MARGIN-LEFT: 6pt
+}
+.indexitem {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany =
+AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: =
+normal; MARGIN-LEFT: 6pt
+}
+.indexprocname {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.indextitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: italic; BACKGROUND-COLOR: =
+#fafbfe
+}
+.layoutcontainer {
+	BORDER-TOP: #000000 0px solid; BORDER-RIGHT: #000000 0px solid; =
+BORDER-BOTTOM: #000000 0px solid; BORDER-SPACING: 30px; BORDER-LEFT: =
+#000000 0px solid
+}
+.layoutregion {
+	BORDER-TOP: #000000 0px solid; BORDER-RIGHT: #000000 0px solid; =
+BORDER-BOTTOM: #000000 0px solid; BORDER-SPACING: 30px; BORDER-LEFT: =
+#000000 0px solid
+}
+.linecontent {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; =
+BORDER-BOTTOM: #c1c1c1 1px solid; FONT-WEIGHT: normal; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #c1c1c1 0px solid; BACKGROUND-COLOR: =
+#fafbfe
+}
+.link {
+	COLOR: #0000ff
+}
+.list {
+	LIST-STYLE-TYPE: disc; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany =
+AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: =
+normal; BACKGROUND-COLOR: #fafbfe
+}
+.list10 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list2 {
+	LIST-STYLE-TYPE: circle; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list3 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list4 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list5 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list6 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list7 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list8 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.list9 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem {
+	LIST-STYLE-TYPE: disc; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany =
+AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: =
+normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem10 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem2 {
+	LIST-STYLE-TYPE: circle; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem3 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem4 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem5 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem6 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem7 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem8 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.listitem9 {
+	LIST-STYLE-TYPE: square; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.note {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.notebanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.notecontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.notecontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: =
+normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.output {
+	FONT-SIZE: x-small; BORDER-TOP: #c1c1c1 1px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #c1c1c1 1px solid; =
+BORDER-COLLAPSE: separate; BORDER-BOTTOM: #c1c1c1 1px solid; =
+FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; BORDER-SPACING: =
+1px; BORDER-LEFT: #c1c1c1 1px solid; BACKGROUND-COLOR: #fafbfe
+}
+.pageno {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+VERTICAL-ALIGN: top; FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: =
+normal; TEXT-ALIGN: right; BORDER-SPACING: 0px; BACKGROUND-COLOR: =
+#fafbfe
+}
+.pages {
+	LIST-STYLE-TYPE: decimal; FONT-SIZE: x-small; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; =
+FONT-STYLE: normal; MARGIN-LEFT: 8px; BACKGROUND-COLOR: #fafbfe; =
+MARGIN-RIGHT: 8px
+}
+.pagesdate {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+WIDTH: 100%; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.pagesitem {
+	LIST-STYLE-TYPE: none; FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany =
+AMT', Helvetica, Helv; FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: =
+normal; MARGIN-LEFT: 6pt
+}
+.pagesproclabel {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.pagesprocname {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.pagestitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: italic; BACKGROUND-COLOR: =
+#fafbfe
+}
+.paragraph {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #000000; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.parskip {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; =
+BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: bold; FONT-STYLE: normal; =
+BORDER-SPACING: 0px; BORDER-LEFT: #000000 0px solid
+}
+.prepage {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; TEXT-ALIGN: =
+left; BACKGROUND-COLOR: #fafbfe
+}
+.proctitle {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.proctitlefixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier, monospace; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.rowfooter {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.rowfooteremphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; =
+FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.rowfooteremphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: =
+'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; =
+FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.rowfooterempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.rowfooterfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: =
+'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: =
+#b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: =
+normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowfooterstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.rowfooterstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: =
+'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.rowheader {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.rowheaderemphasis {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; =
+FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.rowheaderemphasisfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: =
+'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; =
+FONT-STYLE: italic; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.rowheaderempty {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.rowheaderfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: =
+'Courier New', Courier; BORDER-RIGHT: #b0b7bb 1px solid; BORDER-BOTTOM: =
+#b0b7bb 1px solid; FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: =
+normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: #edf2f9
+}
+.rowheaderstrong {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.rowheaderstrongfixed {
+	FONT-SIZE: x-small; BORDER-TOP: #b0b7bb 0px solid; FONT-FAMILY: =
+'Courier New', Courier, monospace; BORDER-RIGHT: #b0b7bb 1px solid; =
+BORDER-BOTTOM: #b0b7bb 1px solid; FONT-WEIGHT: bold; COLOR: #112277; =
+FONT-STYLE: normal; BORDER-LEFT: #b0b7bb 0px solid; BACKGROUND-COLOR: =
+#edf2f9
+}
+.systemfooter {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter10 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter2 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter3 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter4 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter5 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter6 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter7 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter8 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.systemfooter9 {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.systemtitle {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.systemtitle10 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.systemtitle2 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.systemtitle3 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.systemtitle4 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.systemtitle5 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.systemtitle6 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.systemtitle7 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.systemtitle8 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.systemtitle9 {
+	FONT-SIZE: small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.systitleandfootercontainer {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; WIDTH: =
+100%; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: normal; COLOR: =
+#000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #000000 =
+0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.table {
+	BORDER-TOP: #c1c1c1 1px solid; BORDER-RIGHT: #c1c1c1 0px solid; =
+BORDER-COLLAPSE: collapse; BORDER-BOTTOM: #c1c1c1 0px solid; =
+BORDER-SPACING: 0px; BORDER-LEFT: #c1c1c1 1px solid
+}
+.top_stacked_value {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: =
+1px; BORDER-LEFT: 0px
+}
+.middle_stacked_value {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-BOTTOM: =
+1px; PADDING-TOP: 1px; BORDER-LEFT: 0px
+}
+.bottom_stacked_value {
+	BORDER-TOP: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM: 0px; PADDING-TOP: =
+1px; BORDER-LEFT: 0px
+}
+.titleandnotecontainer {
+	FONT-SIZE: x-small; BORDER-TOP: #000000 0px solid; FONT-FAMILY: Arial, =
+'Albany AMT', Helvetica, Helv; BORDER-RIGHT: #000000 0px solid; WIDTH: =
+100%; BORDER-BOTTOM: #000000 0px solid; FONT-WEIGHT: normal; COLOR: =
+#000000; FONT-STYLE: normal; BORDER-SPACING: 1px; BORDER-LEFT: #000000 =
+0px solid; BACKGROUND-COLOR: #fafbfe
+}
+.titlesandfooters {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.usertext {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.visitedlink {
+	COLOR: #800080
+}
+.warnbanner {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: bold; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: =
+#fafbfe
+}
+.warncontent {
+	FONT-SIZE: x-small; FONT-FAMILY: Arial, 'Albany AMT', Helvetica, Helv; =
+FONT-WEIGHT: normal; COLOR: #112277; FONT-STYLE: normal; =
+BACKGROUND-COLOR: #fafbfe
+}
+.warncontentfixed {
+	FONT-SIZE: x-small; FONT-FAMILY: 'Courier New', Courier; FONT-WEIGHT: =
+normal; COLOR: #112277; FONT-STYLE: normal; BACKGROUND-COLOR: #fafbfe
+}
+.l {
+	TEXT-ALIGN: left
+}
+.c {
+	TEXT-ALIGN: center
+}
+.r {
+	TEXT-ALIGN: right
+}
+.d {
+	TEXT-ALIGN: right
+}
+.j {
+	TEXT-ALIGN: justify
+}
+.t {
+	VERTICAL-ALIGN: top
+}
+.m {
+	VERTICAL-ALIGN: middle
+}
+.b {
+	VERTICAL-ALIGN: bottom
+}
+TD {
+	VERTICAL-ALIGN: top
+}
+TH {
+	VERTICAL-ALIGN: top
+}
+.stacked_cell {
+	PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; =
+PADDING-RIGHT: 0px
+}
+</STYLE>
+
+<SCRIPT language=3Djavascript type=3Dtext/javascript>
+<!--=20
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY class=3Dbody onload=3Dstartup() onunload=3Dshutdown()>
+<SCRIPT language=3Djavascript type=3Dtext/javascript>
+<!--=20
+var _info =3D navigator.userAgent
+var _ie =3D (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 =3D _info.indexOf("x64") > 0
+
+//-->
+</SCRIPT>
+
+<DIV class=3Dbranch><A name=3DIDX></A>
+<TABLE class=3Dsystitleandfootercontainer cellSpacing=3D1 =
+cellPadding=3D1 rules=3Dnone=20
+width=3D"100%" summary=3D"Page Layout" border=3D0 frame=3Dvoid>
+  <TBODY>
+  <TR>
+    <TD class=3D"c systemtitle">The SAS =
+System</TD></TR></TBODY></TABLE><BR>
+<DIV class=3D"c proctitle">The FREQ Procedure</DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Freq: One-Way Frequencies" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D5 scope=3Dcolgroup>Did you buy a =
+book in the=20
+      last 12 months?</TH></TR>
+  <TR>
+    <TH class=3D"r b header" scope=3Dcol>book_bought</TH>
+    <TH class=3D"r b header" scope=3Dcol>Frequency</TH>
+    <TH class=3D"r b header" scope=3Dcol>Percent</TH>
+    <TH class=3D"r b header" scope=3Dcol>Cumulative<BR>Frequency</TH>
+    <TH class=3D"r b header" =
+scope=3Dcol>Cumulative<BR>Percent</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>did not buy</TH>
+    <TD class=3D"r data">1594</TD>
+    <TD class=3D"r data">45.54</TD>
+    <TD class=3D"r data">1594</TD>
+    <TD class=3D"r data">45.54</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>bought</TH>
+    <TD class=3D"r data">1906</TD>
+    <TD class=3D"r data">54.46</TD>
+    <TD class=3D"r data">3500</TD>
+    <TD class=3D"r =
+data">100.00</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX1></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Freq: One-Way Frequencies" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D5 scope=3Dcolgroup>It is =
+important to be well=20
+      informed.</TH></TR>
+  <TR>
+    <TH class=3D"r b header" scope=3Dcol>well_informed</TH>
+    <TH class=3D"r b header" scope=3Dcol>Frequency</TH>
+    <TH class=3D"r b header" scope=3Dcol>Percent</TH>
+    <TH class=3D"r b header" scope=3Dcol>Cumulative<BR>Frequency</TH>
+    <TH class=3D"r b header" =
+scope=3Dcol>Cumulative<BR>Percent</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>disagree a lot</TH>
+    <TD class=3D"r data">43</TD>
+    <TD class=3D"r data">1.27</TD>
+    <TD class=3D"r data">43</TD>
+    <TD class=3D"r data">1.27</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>disagree a little</TH>
+    <TD class=3D"r data">76</TD>
+    <TD class=3D"r data">2.25</TD>
+    <TD class=3D"r data">119</TD>
+    <TD class=3D"r data">3.53</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>neither agree nor =
+disagree</TH>
+    <TD class=3D"r data">541</TD>
+    <TD class=3D"r data">16.03</TD>
+    <TD class=3D"r data">660</TD>
+    <TD class=3D"r data">19.56</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>agree a little</TH>
+    <TD class=3D"r data">1283</TD>
+    <TD class=3D"r data">38.03</TD>
+    <TD class=3D"r data">1943</TD>
+    <TD class=3D"r data">57.59</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>agree a lot</TH>
+    <TD class=3D"r data">1431</TD>
+    <TD class=3D"r data">42.41</TD>
+    <TD class=3D"r data">3374</TD>
+    <TD class=3D"r data">100.00</TD></TR></TBODY>
+  <TFOOT>
+  <TR>
+    <TH class=3D"c b footer" colSpan=3D5>Frequency Missing =3D=20
+126</TH></TR></TFOOT></TABLE></DIV></DIV><BR><A name=3DIDX2></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Freq: One-Way Frequencies" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D5 scope=3Dcolgroup>I like to =
+share my=20
+      knowledge with others.</TH></TR>
+  <TR>
+    <TH class=3D"r b header" scope=3Dcol>share_knowledge</TH>
+    <TH class=3D"r b header" scope=3Dcol>Frequency</TH>
+    <TH class=3D"r b header" scope=3Dcol>Percent</TH>
+    <TH class=3D"r b header" scope=3Dcol>Cumulative<BR>Frequency</TH>
+    <TH class=3D"r b header" =
+scope=3Dcol>Cumulative<BR>Percent</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>disagree a lot</TH>
+    <TD class=3D"r data">71</TD>
+    <TD class=3D"r data">2.13</TD>
+    <TD class=3D"r data">71</TD>
+    <TD class=3D"r data">2.13</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>disagree a little</TH>
+    <TD class=3D"r data">185</TD>
+    <TD class=3D"r data">5.54</TD>
+    <TD class=3D"r data">256</TD>
+    <TD class=3D"r data">7.67</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>neither agree nor =
+disagree</TH>
+    <TD class=3D"r data">784</TD>
+    <TD class=3D"r data">23.49</TD>
+    <TD class=3D"r data">1040</TD>
+    <TD class=3D"r data">31.17</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>agree a little</TH>
+    <TD class=3D"r data">1479</TD>
+    <TD class=3D"r data">44.32</TD>
+    <TD class=3D"r data">2519</TD>
+    <TD class=3D"r data">75.49</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>agree a lot</TH>
+    <TD class=3D"r data">818</TD>
+    <TD class=3D"r data">24.51</TD>
+    <TD class=3D"r data">3337</TD>
+    <TD class=3D"r data">100.00</TD></TR></TBODY>
+  <TFOOT>
+  <TR>
+    <TH class=3D"c b footer" colSpan=3D5>Frequency Missing =3D=20
+163</TH></TR></TFOOT></TABLE></DIV></DIV><BR><A name=3DIDX3></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Freq: One-Way Frequencies" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D5 scope=3Dcolgroup>I read print =
+news less=20
+      because of the internet.</TH></TR>
+  <TR>
+    <TH class=3D"r b header" scope=3Dcol>less_news</TH>
+    <TH class=3D"r b header" scope=3Dcol>Frequency</TH>
+    <TH class=3D"r b header" scope=3Dcol>Percent</TH>
+    <TH class=3D"r b header" scope=3Dcol>Cumulative<BR>Frequency</TH>
+    <TH class=3D"r b header" =
+scope=3Dcol>Cumulative<BR>Percent</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>disagree a lot</TH>
+    <TD class=3D"r data">868</TD>
+    <TD class=3D"r data">26.10</TD>
+    <TD class=3D"r data">868</TD>
+    <TD class=3D"r data">26.10</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>disagree a little</TH>
+    <TD class=3D"r data">383</TD>
+    <TD class=3D"r data">11.52</TD>
+    <TD class=3D"r data">1251</TD>
+    <TD class=3D"r data">37.61</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>neither agree nor =
+disagree</TH>
+    <TD class=3D"r data">752</TD>
+    <TD class=3D"r data">22.61</TD>
+    <TD class=3D"r data">2003</TD>
+    <TD class=3D"r data">60.22</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>agree a little</TH>
+    <TD class=3D"r data">694</TD>
+    <TD class=3D"r data">20.87</TD>
+    <TD class=3D"r data">2697</TD>
+    <TD class=3D"r data">81.09</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>agree a lot</TH>
+    <TD class=3D"r data">629</TD>
+    <TD class=3D"r data">18.91</TD>
+    <TD class=3D"r data">3326</TD>
+    <TD class=3D"r data">100.00</TD></TR></TBODY>
+  <TFOOT>
+  <TR>
+    <TH class=3D"c b footer" colSpan=3D5>Frequency Missing =3D=20
+174</TH></TR></TFOOT></TABLE></DIV></DIV><BR></DIV>
+<DIV class=3Dbranch>
+<P style=3D"PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3D3>
+<A name=3DIDX4></A>
+<TABLE class=3Dsystitleandfootercontainer cellSpacing=3D1 =
+cellPadding=3D1 rules=3Dnone=20
+width=3D"100%" summary=3D"Page Layout" border=3D0 frame=3Dvoid>
+  <TBODY>
+  <TR>
+    <TD class=3D"c systemtitle">The SAS =
+System</TD></TR></TBODY></TABLE><BR>
+<DIV class=3D"c proctitle">The FACTOR Procedure</DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Factor: Number of Observations" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>Input Data Type</TH>
+    <TD class=3D"r data">Raw Data</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>Number of Records Read</TH>
+    <TD class=3D"r data">3500</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>Number of Records Used</TH>
+    <TD class=3D"r data">3114</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>N for Significance Tests</TH>
+    <TD class=3D"r data">3114</TD></TR></TBODY></TABLE></DIV></DIV><BR>
+<P style=3D"PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3D3>
+<A name=3DIDX5></A>
+<TABLE class=3Dsystitleandfootercontainer cellSpacing=3D1 =
+cellPadding=3D1 rules=3Dnone=20
+width=3D"100%" summary=3D"Page Layout" border=3D0 frame=3Dvoid>
+  <TBODY>
+  <TR>
+    <TD class=3D"c systemtitle">The SAS =
+System</TD></TR></TBODY></TABLE><BR>
+<DIV class=3D"c proctitle">The FACTOR Procedure</DIV>
+<DIV class=3D"c proctitle">Initial Factor Method: Principal =
+Components</DIV>
+<P><BR>
+<P>
+<DIV align=3Dcenter>
+<TABLE class=3Dproctitle>
+  <TBODY>
+  <TR>
+    <TD class=3D"c proctitle">Prior Communality Estimates: ONE=20
+</TD></TR></TBODY></TABLE></DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Factor: Eigenvalues" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D5 scope=3Dcolgroup>Eigenvalues of =
+the=20
+      Correlation Matrix: Total<BR>=3D 6 Average =3D 1</TH></TR>
+  <TR>
+    <TH class=3D"c headerempty" scope=3Dcol>&nbsp;</TH>
+    <TH class=3D"r b header" scope=3Dcol>Eigenvalue</TH>
+    <TH class=3D"r b header" scope=3Dcol>Difference</TH>
+    <TH class=3D"r b header" scope=3Dcol>Proportion</TH>
+    <TH class=3D"r b header" scope=3Dcol>Cumulative</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>1</TH>
+    <TD class=3D"r data">2.39792474</TD>
+    <TD class=3D"r data">0.69733346</TD>
+    <TD class=3D"r data">0.3997</TD>
+    <TD class=3D"r data">0.3997</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>2</TH>
+    <TD class=3D"r data">1.70059128</TD>
+    <TD class=3D"r data">0.91880377</TD>
+    <TD class=3D"r data">0.2834</TD>
+    <TD class=3D"r data">0.6831</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>3</TH>
+    <TD class=3D"r data">0.78178751</TD>
+    <TD class=3D"r data">0.33446984</TD>
+    <TD class=3D"r data">0.1303</TD>
+    <TD class=3D"r data">0.8134</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>4</TH>
+    <TD class=3D"r data">0.44731766</TD>
+    <TD class=3D"r data">0.04851402</TD>
+    <TD class=3D"r data">0.0746</TD>
+    <TD class=3D"r data">0.8879</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>5</TH>
+    <TD class=3D"r data">0.39880364</TD>
+    <TD class=3D"r data">0.12522847</TD>
+    <TD class=3D"r data">0.0665</TD>
+    <TD class=3D"r data">0.9544</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>6</TH>
+    <TD class=3D"r data">0.27357517</TD>
+    <TD class=3D"r data">&nbsp;</TD>
+    <TD class=3D"r data">0.0456</TD>
+    <TD class=3D"r =
+data">1.0000</TD></TR></TBODY></TABLE></DIV></DIV><BR><BR>
+<P>
+<DIV align=3Dcenter>
+<TABLE class=3Dproctitle>
+  <TBODY>
+  <TR>
+    <TD class=3D"c proctitle">2 factors will be retained by the NFACTOR=20
+      criterion.</TD></TR></TBODY></TABLE></DIV>
+<P><A name=3DIDX6></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE cellSpacing=3D0 cellPadding=3D0 summary=3D"Page Layout">
+  <TBODY>
+  <TR>
+    <TD><PRE class=3Dbatch>Scree Plot of Eigenvalues                     =
+                                                       =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+  2.5 =88                                                                =
+                              =20
+      =82                     1                                          =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+  2.0 =88                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                  2                             =
+                              =20
+E     =82                                                                =
+                              =20
+i     =82                                                                =
+                              =20
+g 1.5 =88                                                                =
+                              =20
+e     =82                                                                =
+                              =20
+n     =82                                                                =
+                              =20
+v     =82                                                                =
+                              =20
+a     =82                                                                =
+                              =20
+l     =82                                                                =
+                              =20
+u     =82                                                                =
+                              =20
+e 1.0 =88                                                                =
+                              =20
+s     =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                               3                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+  0.5 =88                                                                =
+                              =20
+      =82                                                            4   =
+         5                    =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                      6       =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+  0.0 =88                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =82                                                                =
+                              =20
+      =
+=8A=83=83=83=83=83=83=83=83=88=83=83=83=83=83=83=83=83=83=83=83=83=88=83=83=
+=83=83=83=83=83=83=83=83=83=83=88=83=83=83=83=83=83=83=83=83=83=83=83=88=83=
+=83=83=83=83=83=83=83=83=83=83=83=88=83=83=83=83=83=83=83=83=83=83=83=83=88=
+=83=83=83=83=83=83=83=83=83=83=83=83=88=83=83=83=83=83=83=83=83
+               0            1            2            3            4     =
+       5            6       =20
+                                                                         =
+                            =20
+                                                   Number                =
+                            =20
+</PRE></TD></TR></TBODY></TABLE></DIV></DIV><BR><A name=3DIDX7></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Factor: Factor Pattern" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D4 =
+scope=3Dcolgroup>Factor&nbsp;Pattern</TH></TR>
+  <TR>
+    <TH class=3D"c headerempty" colSpan=3D2 scope=3Dcolgroup>&nbsp;</TH>
+    <TH class=3D"r b header" scope=3Dcol>Factor1</TH>
+    <TH class=3D"r b header" scope=3Dcol>Factor2</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>envir_frndly</TH>
+    <TH class=3D"l data">I am more likely to purchase a product or =
+service from=20
+      a company that is environmentally friendly.</TH>
+    <TD class=3D"r data">0.81816</TD>
+    <TD class=3D"r data" noWrap>-0.21517</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>help_consumers</TH>
+    <TH class=3D"l data">Companies should help consumers become more=20
+      environmentally responsible.</TH>
+    <TD class=3D"r data">0.87261</TD>
+    <TD class=3D"r data" noWrap>-0.23964</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>personal_obligation</TH>
+    <TH class=3D"l data">Each of us has a personal obligation to do what =
+we can=20
+      to be environmentally responsible.</TH>
+    <TD class=3D"r data">0.81475</TD>
+    <TD class=3D"r data" noWrap>-0.31482</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>cell_info</TH>
+    <TH class=3D"l data">Use cell phone to get the information I =
+need.</TH>
+    <TD class=3D"r data">0.36301</TD>
+    <TD class=3D"r data">0.74247</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>my_expression</TH>
+    <TH class=3D"l data">Cell phone is an expression of who I am.</TH>
+    <TD class=3D"r data">0.13490</TD>
+    <TD class=3D"r data">0.64531</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>voice_text</TH>
+    <TH class=3D"l data">Like idea of cell moving beyond voice and =
+text.</TH>
+    <TD class=3D"r data">0.39155</TD>
+    <TD class=3D"r =
+data">0.72805</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX8></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Factor: Variance Explained" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D2 scope=3Dcolgroup>Variance =
+Explained by=20
+      Each<BR>Factor</TH></TR>
+  <TR>
+    <TH class=3D"r b header" scope=3Dcol>Factor1</TH>
+    <TH class=3D"r b header" scope=3Dcol>Factor2</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class=3D"r data">2.3979247</TD>
+    <TD class=3D"r =
+data">1.7005913</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX9></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Factor: Final Communality Estimates" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D6 scope=3Dcolgroup>Final =
+Communality=20
+      Estimates: Total =3D 4.098516</TH></TR>
+  <TR>
+    <TH class=3D"r b header" scope=3Dcol>envir_frndly</TH>
+    <TH class=3D"r b header" scope=3Dcol>help_consumers</TH>
+    <TH class=3D"r b header" scope=3Dcol>personal_obligation</TH>
+    <TH class=3D"r b header" scope=3Dcol>cell_info</TH>
+    <TH class=3D"r b header" scope=3Dcol>my_expression</TH>
+    <TH class=3D"r b header" scope=3Dcol>voice_text</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class=3D"r data">0.71567697</TD>
+    <TD class=3D"r data">0.81887232</TD>
+    <TD class=3D"r data">0.76292232</TD>
+    <TD class=3D"r data">0.68304548</TD>
+    <TD class=3D"r data">0.43462574</TD>
+    <TD class=3D"r =
+data">0.68337319</TD></TR></TBODY></TABLE></DIV></DIV><BR>
+<P style=3D"PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3D3>
+<A name=3DIDX10></A>
+<TABLE class=3Dsystitleandfootercontainer cellSpacing=3D1 =
+cellPadding=3D1 rules=3Dnone=20
+width=3D"100%" summary=3D"Page Layout" border=3D0 frame=3Dvoid>
+  <TBODY>
+  <TR>
+    <TD class=3D"c systemtitle">The SAS =
+System</TD></TR></TBODY></TABLE><BR>
+<DIV class=3D"c proctitle">The FACTOR Procedure</DIV>
+<DIV class=3D"c proctitle">Rotation Method: Varimax</DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Factor: Orthogonal Transformation Matrix" =
+frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D3 scope=3Dcolgroup>Orthogonal =
+Transformation=20
+      Matrix</TH></TR>
+  <TR>
+    <TH class=3D"c headerempty" scope=3Dcol>&nbsp;</TH>
+    <TH class=3D"r b header" scope=3Dcol>1</TH>
+    <TH class=3D"r b header" scope=3Dcol>2</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>1</TH>
+    <TD class=3D"r data">0.94233</TD>
+    <TD class=3D"r data">0.33469</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>2</TH>
+    <TD class=3D"r data" noWrap>-0.33469</TD>
+    <TD class=3D"r =
+data">0.94233</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX11></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Factor: Rotated Factor Pattern" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D4=20
+      scope=3Dcolgroup>Rotated&nbsp;Factor&nbsp;Pattern</TH></TR>
+  <TR>
+    <TH class=3D"c headerempty" colSpan=3D2 scope=3Dcolgroup>&nbsp;</TH>
+    <TH class=3D"r b header" scope=3Dcol>Factor1</TH>
+    <TH class=3D"r b header" scope=3Dcol>Factor2</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>envir_frndly</TH>
+    <TH class=3D"l data">I am more likely to purchase a product or =
+service from=20
+      a company that is environmentally friendly.</TH>
+    <TD class=3D"r data">0.84299</TD>
+    <TD class=3D"r data">0.07107</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>help_consumers</TH>
+    <TH class=3D"l data">Companies should help consumers become more=20
+      environmentally responsible.</TH>
+    <TD class=3D"r data">0.90249</TD>
+    <TD class=3D"r data">0.06624</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>personal_obligation</TH>
+    <TH class=3D"l data">Each of us has a personal obligation to do what =
+we can=20
+      to be environmentally responsible.</TH>
+    <TD class=3D"r data">0.87313</TD>
+    <TD class=3D"r data" noWrap>-0.02398</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>cell_info</TH>
+    <TH class=3D"l data">Use cell phone to get the information I =
+need.</TH>
+    <TD class=3D"r data">0.09358</TD>
+    <TD class=3D"r data">0.82115</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>my_expression</TH>
+    <TH class=3D"l data">Cell phone is an expression of who I am.</TH>
+    <TD class=3D"r data" noWrap>-0.08886</TD>
+    <TD class=3D"r data">0.65325</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>voice_text</TH>
+    <TH class=3D"l data">Like idea of cell moving beyond voice and =
+text.</TH>
+    <TD class=3D"r data">0.12530</TD>
+    <TD class=3D"r =
+data">0.81711</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX12></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Factor: Variance Explained" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D2 scope=3Dcolgroup>Variance =
+Explained by=20
+      Each<BR>Factor</TH></TR>
+  <TR>
+    <TH class=3D"r b header" scope=3Dcol>Factor1</TH>
+    <TH class=3D"r b header" scope=3Dcol>Factor2</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class=3D"r data">2.3198112</TD>
+    <TD class=3D"r =
+data">1.7787048</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX13></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Factor: Final Communality Estimates" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D6 scope=3Dcolgroup>Final =
+Communality=20
+      Estimates: Total =3D 4.098516</TH></TR>
+  <TR>
+    <TH class=3D"r b header" scope=3Dcol>envir_frndly</TH>
+    <TH class=3D"r b header" scope=3Dcol>help_consumers</TH>
+    <TH class=3D"r b header" scope=3Dcol>personal_obligation</TH>
+    <TH class=3D"r b header" scope=3Dcol>cell_info</TH>
+    <TH class=3D"r b header" scope=3Dcol>my_expression</TH>
+    <TH class=3D"r b header" scope=3Dcol>voice_text</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class=3D"r data">0.71567697</TD>
+    <TD class=3D"r data">0.81887232</TD>
+    <TD class=3D"r data">0.76292232</TD>
+    <TD class=3D"r data">0.68304548</TD>
+    <TD class=3D"r data">0.43462574</TD>
+    <TD class=3D"r =
+data">0.68337319</TD></TR></TBODY></TABLE></DIV></DIV><BR>
+<P style=3D"PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3D3>
+<A name=3DIDX14></A>
+<TABLE class=3Dsystitleandfootercontainer cellSpacing=3D1 =
+cellPadding=3D1 rules=3Dnone=20
+width=3D"100%" summary=3D"Page Layout" border=3D0 frame=3Dvoid>
+  <TBODY>
+  <TR>
+    <TD class=3D"c systemtitle">The SAS =
+System</TD></TR></TBODY></TABLE><BR>
+<DIV class=3D"c proctitle">The FACTOR Procedure</DIV>
+<DIV class=3D"c proctitle">Rotation Method: Varimax</DIV>
+<P><BR>
+<P>
+<DIV align=3Dcenter>
+<TABLE class=3Dproctitle>
+  <TBODY>
+  <TR>
+    <TD class=3D"c proctitle">Scoring Coefficients Estimated by=20
+  Regression</TD></TR></TBODY></TABLE></DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Factor: Squared Multiple Correlations of Variables =
+with Factors"=20
+frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D2 scope=3Dcolgroup>Squared =
+Multiple=20
+      Correlations<BR>of the Variables with Each<BR>Factor</TH></TR>
+  <TR>
+    <TH class=3D"r b header" scope=3Dcol>Factor1</TH>
+    <TH class=3D"r b header" scope=3Dcol>Factor2</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TD class=3D"r data">1.0000000</TD>
+    <TD class=3D"r =
+data">1.0000000</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX15></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Factor: Standardized Scoring Coefficients" =
+frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D4 scope=3Dcolgroup>Standardized =
+Scoring=20
+      Coefficients</TH></TR>
+  <TR>
+    <TH class=3D"c headerempty" colSpan=3D2 scope=3Dcolgroup>&nbsp;</TH>
+    <TH class=3D"r b header" scope=3Dcol>Factor1</TH>
+    <TH class=3D"r b header" scope=3Dcol>Factor2</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>envir_frndly</TH>
+    <TH class=3D"l data">I am more likely to purchase a product or =
+service from=20
+      a company that is environmentally friendly.</TH>
+    <TD class=3D"r data">0.36386</TD>
+    <TD class=3D"r data" noWrap>-0.00503</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>help_consumers</TH>
+    <TH class=3D"l data">Companies should help consumers become more=20
+      environmentally responsible.</TH>
+    <TD class=3D"r data">0.39008</TD>
+    <TD class=3D"r data" noWrap>-0.01099</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>personal_obligation</TH>
+    <TH class=3D"l data">Each of us has a personal obligation to do what =
+we can=20
+      to be environmentally responsible.</TH>
+    <TD class=3D"r data">0.38214</TD>
+    <TD class=3D"r data" noWrap>-0.06073</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>cell_info</TH>
+    <TH class=3D"l data">Use cell phone to get the information I =
+need.</TH>
+    <TD class=3D"r data" noWrap>-0.00347</TD>
+    <TD class=3D"r data">0.46209</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>my_expression</TH>
+    <TH class=3D"l data">Cell phone is an expression of who I am.</TH>
+    <TD class=3D"r data" noWrap>-0.07399</TD>
+    <TD class=3D"r data">0.37641</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>voice_text</TH>
+    <TH class=3D"l data">Like idea of cell moving beyond voice and =
+text.</TH>
+    <TD class=3D"r data">0.01058</TD>
+    <TD class=3D"r =
+data">0.45808</TD></TR></TBODY></TABLE></DIV></DIV><BR></DIV>
+<DIV class=3Dbranch>
+<P style=3D"PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3D3>
+<A name=3DIDX16></A>
+<TABLE class=3Dsystitleandfootercontainer cellSpacing=3D1 =
+cellPadding=3D1 rules=3Dnone=20
+width=3D"100%" summary=3D"Page Layout" border=3D0 frame=3Dvoid>
+  <TBODY>
+  <TR>
+    <TD class=3D"c systemtitle">The SAS =
+System</TD></TR></TBODY></TABLE><BR>
+<DIV class=3D"c proctitle">The FASTCLUS Procedure</DIV>
+<DIV class=3D"c proctitle">Replace=3DFULL Radius=3D0 Maxclusters=3D3 =
+Maxiter=3D100=20
+Converge=3D0.02</DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Initial Seeds" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D6 scope=3Dcolgroup>Initial =
+Seeds</TH></TR>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Cluster</TH>
+    <TH class=3D"r b header" scope=3Dcol>environment</TH>
+    <TH class=3D"r b header" scope=3Dcol>cell_phone</TH>
+    <TH class=3D"r b header" scope=3Dcol>well_informed</TH>
+    <TH class=3D"r b header" scope=3Dcol>share_knowledge</TH>
+    <TH class=3D"r b header" scope=3Dcol>less_news</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>1</TH>
+    <TD class=3D"r data">1.433100432</TD>
+    <TD class=3D"r data">0.011020610</TD>
+    <TD class=3D"r data">5.000000000</TD>
+    <TD class=3D"r data">5.000000000</TD>
+    <TD class=3D"r data">5.000000000</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>2</TH>
+    <TD class=3D"r data" noWrap>-2.629952524</TD>
+    <TD class=3D"r data">2.176115422</TD>
+    <TD class=3D"r data">1.000000000</TD>
+    <TD class=3D"r data">1.000000000</TD>
+    <TD class=3D"r data">5.000000000</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>3</TH>
+    <TD class=3D"r data">1.403385351</TD>
+    <TD class=3D"r data" noWrap>-2.160748537</TD>
+    <TD class=3D"r data">1.000000000</TD>
+    <TD class=3D"r data">1.000000000</TD>
+    <TD class=3D"r =
+data">1.000000000</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX17></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Minimum Distance" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>Minimum Distance Between =
+Initial Seeds=20
+    =3D</TH>
+    <TD class=3D"r =
+data">7.146762</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX18></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Iteration History" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D5 scope=3Dcolgroup>Iteration =
+History</TH></TR>
+  <TR>
+    <TH class=3D"c b header" rowSpan=3D2 scope=3Dcol>Iteration</TH>
+    <TH class=3D"r b header" rowSpan=3D2 scope=3Dcol>Criterion</TH>
+    <TH class=3D"c b header" colSpan=3D3 scope=3Dcolgroup>Relative =
+Change in Cluster=20
+      Seeds</TH></TR>
+  <TR>
+    <TH class=3D"r b header" scope=3Dcol>1 </TH>
+    <TH class=3D"r b header" scope=3Dcol>2 </TH>
+    <TH class=3D"r b header" scope=3Dcol>3 </TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>1</TH>
+    <TD class=3D"r data">1.5712</TD>
+    <TD class=3D"r data">0.3580</TD>
+    <TD class=3D"r data">0.4791</TD>
+    <TD class=3D"r data">0.5140</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>2</TH>
+    <TD class=3D"r data">0.9238</TD>
+    <TD class=3D"r data">0.0634</TD>
+    <TD class=3D"r data">0.1061</TD>
+    <TD class=3D"r data">0.1191</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>3</TH>
+    <TD class=3D"r data">0.8473</TD>
+    <TD class=3D"r data">0.0612</TD>
+    <TD class=3D"r data">0.0350</TD>
+    <TD class=3D"r data">0.0760</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>4</TH>
+    <TD class=3D"r data">0.8105</TD>
+    <TD class=3D"r data">0.0352</TD>
+    <TD class=3D"r data">0.0253</TD>
+    <TD class=3D"r data">0.0315</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>5</TH>
+    <TD class=3D"r data">0.8018</TD>
+    <TD class=3D"r data">0.0118</TD>
+    <TD class=3D"r data">0.0175</TD>
+    <TD class=3D"r =
+data">0.0109</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX19></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Convergence Status" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TD class=3D"l data">Convergence criterion is=20
+satisfied.</TD></TR></TBODY></TABLE></DIV></DIV><BR><A name=3DIDX20></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Criterion" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>Criterion Based on Final Seeds =
+=3D</TH>
+    <TD class=3D"r =
+data">0.8001</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX21></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Cluster Summary" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D7 scope=3Dcolgroup>Cluster =
+Summary</TH></TR>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Cluster</TH>
+    <TH class=3D"r b header" scope=3Dcol>Frequency</TH>
+    <TH class=3D"r b header" scope=3Dcol>RMS Std Deviation</TH>
+    <TH class=3D"r b header" scope=3Dcol>Maximum Distance<BR>from =
+Seed<BR>to=20
+      Observation</TH>
+    <TH class=3D"c b header" scope=3Dcol>Radius<BR>Exceeded</TH>
+    <TH class=3D"r b header" scope=3Dcol>Nearest Cluster</TH>
+    <TH class=3D"r b header" scope=3Dcol>Distance Between<BR>Cluster=20
+  Centroids</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>1</TH>
+    <TD class=3D"r data">1347</TD>
+    <TD class=3D"r data">0.7438</TD>
+    <TD class=3D"r data">4.2491</TD>
+    <TD class=3D"c data">&nbsp;</TD>
+    <TD class=3D"r data">2</TD>
+    <TD class=3D"r data">2.4167</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>2</TH>
+    <TD class=3D"r data">915</TD>
+    <TD class=3D"r data">0.8790</TD>
+    <TD class=3D"r data">4.9279</TD>
+    <TD class=3D"c data">&nbsp;</TD>
+    <TD class=3D"r data">1</TD>
+    <TD class=3D"r data">2.4167</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>3</TH>
+    <TD class=3D"r data">1160</TD>
+    <TD class=3D"r data">0.8049</TD>
+    <TD class=3D"r data">4.9296</TD>
+    <TD class=3D"c data">&nbsp;</TD>
+    <TD class=3D"r data">2</TD>
+    <TD class=3D"r =
+data">2.6333</TD></TR></TBODY></TABLE></DIV></DIV><BR><BR>
+<P>
+<DIV align=3Dcenter>
+<TABLE class=3Dproctitle>
+  <TBODY>
+  <TR>
+    <TD class=3D"c proctitle">78 Observation(s) were omitted due to =
+missing=20
+      values.</TD></TR></TBODY></TABLE></DIV>
+<P><A name=3DIDX22></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Statistics for Variables" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <COLGROUP></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D5 scope=3Dcolgroup>Statistics for =
+
+  Variables</TH></TR>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Variable</TH>
+    <TH class=3D"r b header" scope=3Dcol>Total STD</TH>
+    <TH class=3D"r b header" scope=3Dcol>Within STD</TH>
+    <TH class=3D"r b header" scope=3Dcol>R-Square</TH>
+    <TH class=3D"r b header" scope=3Dcol>RSQ/(1-RSQ)</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>environment</TH>
+    <TD class=3D"r data">1.00000</TD>
+    <TD class=3D"r data">0.82030</TD>
+    <TD class=3D"r data">0.327536</TD>
+    <TH class=3D"r data">0.487068</TH></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>cell_phone</TH>
+    <TD class=3D"r data">1.00000</TD>
+    <TD class=3D"r data">0.91106</TD>
+    <TD class=3D"r data">0.170504</TD>
+    <TH class=3D"r data">0.205551</TH></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>well_informed</TH>
+    <TD class=3D"r data">0.87001</TD>
+    <TD class=3D"r data">0.70903</TD>
+    <TD class=3D"r data">0.336216</TD>
+    <TH class=3D"r data">0.506514</TH></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>share_knowledge</TH>
+    <TD class=3D"r data">0.93087</TD>
+    <TD class=3D"r data">0.81980</TD>
+    <TD class=3D"r data">0.224855</TD>
+    <TH class=3D"r data">0.290081</TH></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>less_news</TH>
+    <TD class=3D"r data">1.45681</TD>
+    <TD class=3D"r data">0.73428</TD>
+    <TD class=3D"r data">0.746102</TD>
+    <TH class=3D"r data">2.938591</TH></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>OVER-ALL</TH>
+    <TD class=3D"r data">1.07317</TD>
+    <TD class=3D"r data">0.80010</TD>
+    <TD class=3D"r data">0.444492</TD>
+    <TH class=3D"r =
+data">0.800154</TH></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX23></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Pseudo F Statistic" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>Pseudo F Statistic =3D</TH>
+    <TD class=3D"r =
+data">1367.86</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX24></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Approximate Expected Over-All R-Squared"=20
+  frame=3Dbox><COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>Approximate Expected Over-All =
+R-Squared=20
+    =3D</TH>
+    <TD class=3D"r =
+data">0.37501</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX25></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Cubic Clustering Criterion" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>Cubic Clustering Criterion =
+=3D</TH>
+    <TD class=3D"r =
+data">22.295</TD></TR></TBODY></TABLE></DIV></DIV><BR><BR>
+<P>
+<DIV align=3Dcenter>
+<TABLE class=3Dproctitle>
+  <TBODY>
+  <TR>
+    <TD class=3D"c proctitle">WARNING: The two values above are invalid =
+for=20
+      correlated variables.</TD></TR></TBODY></TABLE></DIV>
+<P><A name=3DIDX26></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Cluster Means" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D6 scope=3Dcolgroup>Cluster =
+Means</TH></TR>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Cluster</TH>
+    <TH class=3D"r b header" scope=3Dcol>environment</TH>
+    <TH class=3D"r b header" scope=3Dcol>cell_phone</TH>
+    <TH class=3D"r b header" scope=3Dcol>well_informed</TH>
+    <TH class=3D"r b header" scope=3Dcol>share_knowledge</TH>
+    <TH class=3D"r b header" scope=3Dcol>less_news</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>1</TH>
+    <TD class=3D"r data">0.386597540</TD>
+    <TD class=3D"r data">0.430019132</TD>
+    <TD class=3D"r data">4.538403614</TD>
+    <TD class=3D"r data">4.197869102</TD>
+    <TD class=3D"r data">4.251141553</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>2</TH>
+    <TD class=3D"r data" noWrap>-0.947656061</TD>
+    <TD class=3D"r data">0.024878123</TD>
+    <TD class=3D"r data">3.346711260</TD>
+    <TD class=3D"r data">3.122060470</TD>
+    <TD class=3D"r data">3.102941176</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>3</TH>
+    <TD class=3D"r data">0.292317402</TD>
+    <TD class=3D"r data" noWrap>-0.537403897</TD>
+    <TD class=3D"r data">4.417754569</TD>
+    <TD class=3D"r data">3.977876106</TD>
+    <TD class=3D"r =
+data">1.313829787</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX27></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Cluster Standard Deviations" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D6 scope=3Dcolgroup>Cluster =
+Standard=20
+    Deviations</TH></TR>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Cluster</TH>
+    <TH class=3D"r b header" scope=3Dcol>environment</TH>
+    <TH class=3D"r b header" scope=3Dcol>cell_phone</TH>
+    <TH class=3D"r b header" scope=3Dcol>well_informed</TH>
+    <TH class=3D"r b header" scope=3Dcol>share_knowledge</TH>
+    <TH class=3D"r b header" scope=3Dcol>less_news</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>1</TH>
+    <TD class=3D"r data">0.7639738431</TD>
+    <TD class=3D"r data">0.8843388627</TD>
+    <TD class=3D"r data">0.5976854476</TD>
+    <TD class=3D"r data">0.7017300097</TD>
+    <TD class=3D"r data">0.7421194446</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>2</TH>
+    <TD class=3D"r data">0.8592525149</TD>
+    <TD class=3D"r data">0.8498816182</TD>
+    <TD class=3D"r data">0.8603186690</TD>
+    <TD class=3D"r data">0.8994862813</TD>
+    <TD class=3D"r data">0.9238456437</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>3</TH>
+    <TD class=3D"r data">0.8532454709</TD>
+    <TD class=3D"r data">0.9868519234</TD>
+    <TD class=3D"r data">0.6968556849</TD>
+    <TD class=3D"r data">0.8790681226</TD>
+    <TD class=3D"r =
+data">0.5286001799</TD></TR></TBODY></TABLE></DIV></DIV><BR></DIV>
+<DIV class=3Dbranch>
+<P style=3D"PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3D3>
+<A name=3DIDX28></A>
+<TABLE class=3Dsystitleandfootercontainer cellSpacing=3D1 =
+cellPadding=3D1 rules=3Dnone=20
+width=3D"100%" summary=3D"Page Layout" border=3D0 frame=3Dvoid>
+  <TBODY>
+  <TR>
+    <TD class=3D"c systemtitle">The SAS =
+System</TD></TR></TBODY></TABLE><BR>
+<DIV class=3D"c proctitle">The MEANS Procedure</DIV>
+<P>
+<DIV class=3D"c byline">Cluster=3D.</DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Means: Summary statistics" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Variable</TH>
+    <TH class=3D"l b header" scope=3Dcol>Label</TH>
+    <TH class=3D"r b header" scope=3Dcol>N</TH>
+    <TH class=3D"r b header" scope=3Dcol>Mean</TH>
+    <TH class=3D"r b header" scope=3Dcol>Std Dev</TH>
+    <TH class=3D"r b header" scope=3Dcol>Minimum</TH>
+    <TH class=3D"r b header" scope=3Dcol>Maximum</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">mobile_app</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">website</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">email</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">nat_geo</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">people</TH></TR>
+        <TR>
+          <TH=20
+      class=3D"l data =
+bottom_stacked_value">southern_living</TH></TR></TBODY></TABLE></TH>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">I ordered my product or =
+service=20
+            on a mobile app.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service on a website.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service using an email.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read =
+National=20
+            Geographic in the last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read People =
+in the=20
+            last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data bottom_stacked_value">Have you read =
+Southern=20
+            Living in the last 6 months?</TH></TR></TBODY></TABLE></TH>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">78</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">78</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">78</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">78</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">78</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">78</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.1923077</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0641026</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0128205</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0256410</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.0128205</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.3966644</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2465209</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.1132277</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.1590850</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.1132277</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">0</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">1.0000000</TD></TR></TBODY></TABLE></TD></TR></TBOD=
+Y></TABLE></DIV></DIV><BR><A=20
+name=3DIDX29></A>
+<DIV class=3D"c byline">Cluster=3D1</DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Means: Summary statistics" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Variable</TH>
+    <TH class=3D"l b header" scope=3Dcol>Label</TH>
+    <TH class=3D"r b header" scope=3Dcol>N</TH>
+    <TH class=3D"r b header" scope=3Dcol>Mean</TH>
+    <TH class=3D"r b header" scope=3Dcol>Std Dev</TH>
+    <TH class=3D"r b header" scope=3Dcol>Minimum</TH>
+    <TH class=3D"r b header" scope=3Dcol>Maximum</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">mobile_app</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">website</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">email</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">nat_geo</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">people</TH></TR>
+        <TR>
+          <TH=20
+      class=3D"l data =
+bottom_stacked_value">southern_living</TH></TR></TBODY></TABLE></TH>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">I ordered my product or =
+service=20
+            on a mobile app.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service on a website.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service using an email.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read =
+National=20
+            Geographic in the last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read People =
+in the=20
+            last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data bottom_stacked_value">Have you read =
+Southern=20
+            Living in the last 6 months?</TH></TR></TBODY></TABLE></TH>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">1347</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1347</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1347</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1347</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1347</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">1347</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0.0809206</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.4766147</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.1514477</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0296956</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0467706</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.0230141</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0.2728144</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.4996383</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.3586178</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.1698093</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2112256</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.1500039</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">0</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">1.0000000</TD></TR></TBODY></TABLE></TD></TR></TBOD=
+Y></TABLE></DIV></DIV><BR><A=20
+name=3DIDX30></A>
+<DIV class=3D"c byline">Cluster=3D2</DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Means: Summary statistics" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Variable</TH>
+    <TH class=3D"l b header" scope=3Dcol>Label</TH>
+    <TH class=3D"r b header" scope=3Dcol>N</TH>
+    <TH class=3D"r b header" scope=3Dcol>Mean</TH>
+    <TH class=3D"r b header" scope=3Dcol>Std Dev</TH>
+    <TH class=3D"r b header" scope=3Dcol>Minimum</TH>
+    <TH class=3D"r b header" scope=3Dcol>Maximum</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">mobile_app</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">website</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">email</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">nat_geo</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">people</TH></TR>
+        <TR>
+          <TH=20
+      class=3D"l data =
+bottom_stacked_value">southern_living</TH></TR></TBODY></TABLE></TH>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">I ordered my product or =
+service=20
+            on a mobile app.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service on a website.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service using an email.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read =
+National=20
+            Geographic in the last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read People =
+in the=20
+            last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data bottom_stacked_value">Have you read =
+Southern=20
+            Living in the last 6 months?</TH></TR></TBODY></TABLE></TH>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">915</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">915</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">915</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">915</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">915</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">915</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0.0469945</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2972678</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0972678</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0174863</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0404372</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.0229508</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0.2117429</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.4573054</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2964841</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.1311463</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.1970899</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.1498286</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">0</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">1.0000000</TD></TR></TBODY></TABLE></TD></TR></TBOD=
+Y></TABLE></DIV></DIV><BR><A=20
+name=3DIDX31></A>
+<DIV class=3D"c byline">Cluster=3D3</DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Means: Summary statistics" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Variable</TH>
+    <TH class=3D"l b header" scope=3Dcol>Label</TH>
+    <TH class=3D"r b header" scope=3Dcol>N</TH>
+    <TH class=3D"r b header" scope=3Dcol>Mean</TH>
+    <TH class=3D"r b header" scope=3Dcol>Std Dev</TH>
+    <TH class=3D"r b header" scope=3Dcol>Minimum</TH>
+    <TH class=3D"r b header" scope=3Dcol>Maximum</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">mobile_app</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">website</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">email</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">nat_geo</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">people</TH></TR>
+        <TR>
+          <TH=20
+      class=3D"l data =
+bottom_stacked_value">southern_living</TH></TR></TBODY></TABLE></TH>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">I ordered my product or =
+service=20
+            on a mobile app.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service on a website.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service using an email.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read =
+National=20
+            Geographic in the last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read People =
+in the=20
+            last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data bottom_stacked_value">Have you read =
+Southern=20
+            Living in the last 6 months?</TH></TR></TBODY></TABLE></TH>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">1160</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1160</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1160</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1160</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1160</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">1160</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0.0284483</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2706897</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0974138</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0491379</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0672414</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.0327586</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0.1663214</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.4445077</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2966483</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2162492</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2505476</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.1780810</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">0</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">1.0000000</TD></TR></TBODY></TABLE></TD></TR></TBOD=
+Y></TABLE></DIV></DIV><BR></DIV>
+<DIV class=3Dbranch>
+<P style=3D"PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3D3>
+<A name=3DIDX32></A>
+<TABLE class=3Dsystitleandfootercontainer cellSpacing=3D1 =
+cellPadding=3D1 rules=3Dnone=20
+width=3D"100%" summary=3D"Page Layout" border=3D0 frame=3Dvoid>
+  <TBODY>
+  <TR>
+    <TD class=3D"c systemtitle">The SAS =
+System</TD></TR></TBODY></TABLE><BR>
+<DIV class=3D"c proctitle">The FASTCLUS Procedure</DIV>
+<DIV class=3D"c proctitle">Replace=3DFULL Radius=3D0 Maxclusters=3D3 =
+Maxiter=3D100=20
+Converge=3D0.02</DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Initial Seeds" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D6 scope=3Dcolgroup>Initial =
+Seeds</TH></TR>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Cluster</TH>
+    <TH class=3D"r b header" scope=3Dcol>environment</TH>
+    <TH class=3D"r b header" scope=3Dcol>cell_phone</TH>
+    <TH class=3D"r b header" scope=3Dcol>well_informed</TH>
+    <TH class=3D"r b header" scope=3Dcol>share_knowledge</TH>
+    <TH class=3D"r b header" scope=3Dcol>less_news</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>1</TH>
+    <TD class=3D"r data">1.433100432</TD>
+    <TD class=3D"r data">0.011020610</TD>
+    <TD class=3D"r data">5.000000000</TD>
+    <TD class=3D"r data">5.000000000</TD>
+    <TD class=3D"r data">5.000000000</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>2</TH>
+    <TD class=3D"r data" noWrap>-2.629952524</TD>
+    <TD class=3D"r data">2.176115422</TD>
+    <TD class=3D"r data">1.000000000</TD>
+    <TD class=3D"r data">1.000000000</TD>
+    <TD class=3D"r data">5.000000000</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>3</TH>
+    <TD class=3D"r data">1.403385351</TD>
+    <TD class=3D"r data" noWrap>-2.160748537</TD>
+    <TD class=3D"r data">1.000000000</TD>
+    <TD class=3D"r data">1.000000000</TD>
+    <TD class=3D"r =
+data">1.000000000</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX33></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Minimum Distance" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>Minimum Distance Between =
+Initial Seeds=20
+    =3D</TH>
+    <TD class=3D"r =
+data">7.146762</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX34></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Iteration History" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D5 scope=3Dcolgroup>Iteration =
+History</TH></TR>
+  <TR>
+    <TH class=3D"c b header" rowSpan=3D2 scope=3Dcol>Iteration</TH>
+    <TH class=3D"r b header" rowSpan=3D2 scope=3Dcol>Criterion</TH>
+    <TH class=3D"c b header" colSpan=3D3 scope=3Dcolgroup>Relative =
+Change in Cluster=20
+      Seeds</TH></TR>
+  <TR>
+    <TH class=3D"r b header" scope=3Dcol>1 </TH>
+    <TH class=3D"r b header" scope=3Dcol>2 </TH>
+    <TH class=3D"r b header" scope=3Dcol>3 </TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>1</TH>
+    <TD class=3D"r data">1.5712</TD>
+    <TD class=3D"r data">0.3580</TD>
+    <TD class=3D"r data">0.4791</TD>
+    <TD class=3D"r data">0.5140</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>2</TH>
+    <TD class=3D"r data">0.9238</TD>
+    <TD class=3D"r data">0.0634</TD>
+    <TD class=3D"r data">0.1061</TD>
+    <TD class=3D"r data">0.1191</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>3</TH>
+    <TD class=3D"r data">0.8473</TD>
+    <TD class=3D"r data">0.0612</TD>
+    <TD class=3D"r data">0.0350</TD>
+    <TD class=3D"r data">0.0760</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>4</TH>
+    <TD class=3D"r data">0.8105</TD>
+    <TD class=3D"r data">0.0352</TD>
+    <TD class=3D"r data">0.0253</TD>
+    <TD class=3D"r data">0.0315</TD></TR>
+  <TR>
+    <TH class=3D"r rowheader" scope=3Drow>5</TH>
+    <TD class=3D"r data">0.8018</TD>
+    <TD class=3D"r data">0.0118</TD>
+    <TD class=3D"r data">0.0175</TD>
+    <TD class=3D"r =
+data">0.0109</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX35></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Convergence Status" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TD class=3D"l data">Convergence criterion is=20
+satisfied.</TD></TR></TBODY></TABLE></DIV></DIV><BR><A name=3DIDX36></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Criterion" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>Criterion Based on Final Seeds =
+=3D</TH>
+    <TD class=3D"r =
+data">0.8001</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX37></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Cluster Summary" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D7 scope=3Dcolgroup>Cluster =
+Summary</TH></TR>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Cluster</TH>
+    <TH class=3D"r b header" scope=3Dcol>Frequency</TH>
+    <TH class=3D"r b header" scope=3Dcol>RMS Std Deviation</TH>
+    <TH class=3D"r b header" scope=3Dcol>Maximum Distance<BR>from =
+Seed<BR>to=20
+      Observation</TH>
+    <TH class=3D"c b header" scope=3Dcol>Radius<BR>Exceeded</TH>
+    <TH class=3D"r b header" scope=3Dcol>Nearest Cluster</TH>
+    <TH class=3D"r b header" scope=3Dcol>Distance Between<BR>Cluster=20
+  Centroids</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>1</TH>
+    <TD class=3D"r data">1347</TD>
+    <TD class=3D"r data">0.7438</TD>
+    <TD class=3D"r data">4.2491</TD>
+    <TD class=3D"c data">&nbsp;</TD>
+    <TD class=3D"r data">2</TD>
+    <TD class=3D"r data">2.4167</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>2</TH>
+    <TD class=3D"r data">915</TD>
+    <TD class=3D"r data">0.8790</TD>
+    <TD class=3D"r data">4.9279</TD>
+    <TD class=3D"c data">&nbsp;</TD>
+    <TD class=3D"r data">1</TD>
+    <TD class=3D"r data">2.4167</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>3</TH>
+    <TD class=3D"r data">1160</TD>
+    <TD class=3D"r data">0.8049</TD>
+    <TD class=3D"r data">4.9296</TD>
+    <TD class=3D"c data">&nbsp;</TD>
+    <TD class=3D"r data">2</TD>
+    <TD class=3D"r =
+data">2.6333</TD></TR></TBODY></TABLE></DIV></DIV><BR><BR>
+<P>
+<DIV align=3Dcenter>
+<TABLE class=3Dproctitle>
+  <TBODY>
+  <TR>
+    <TD class=3D"c proctitle">78 Observation(s) were omitted due to =
+missing=20
+      values.</TD></TR></TBODY></TABLE></DIV>
+<P><A name=3DIDX38></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Statistics for Variables" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <COLGROUP></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D5 scope=3Dcolgroup>Statistics for =
+
+  Variables</TH></TR>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Variable</TH>
+    <TH class=3D"r b header" scope=3Dcol>Total STD</TH>
+    <TH class=3D"r b header" scope=3Dcol>Within STD</TH>
+    <TH class=3D"r b header" scope=3Dcol>R-Square</TH>
+    <TH class=3D"r b header" scope=3Dcol>RSQ/(1-RSQ)</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>environment</TH>
+    <TD class=3D"r data">1.00000</TD>
+    <TD class=3D"r data">0.82030</TD>
+    <TD class=3D"r data">0.327536</TD>
+    <TH class=3D"r data">0.487068</TH></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>cell_phone</TH>
+    <TD class=3D"r data">1.00000</TD>
+    <TD class=3D"r data">0.91106</TD>
+    <TD class=3D"r data">0.170504</TD>
+    <TH class=3D"r data">0.205551</TH></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>well_informed</TH>
+    <TD class=3D"r data">0.87001</TD>
+    <TD class=3D"r data">0.70903</TD>
+    <TD class=3D"r data">0.336216</TD>
+    <TH class=3D"r data">0.506514</TH></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>share_knowledge</TH>
+    <TD class=3D"r data">0.93087</TD>
+    <TD class=3D"r data">0.81980</TD>
+    <TD class=3D"r data">0.224855</TD>
+    <TH class=3D"r data">0.290081</TH></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>less_news</TH>
+    <TD class=3D"r data">1.45681</TD>
+    <TD class=3D"r data">0.73428</TD>
+    <TD class=3D"r data">0.746102</TD>
+    <TH class=3D"r data">2.938591</TH></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>OVER-ALL</TH>
+    <TD class=3D"r data">1.07317</TD>
+    <TD class=3D"r data">0.80010</TD>
+    <TD class=3D"r data">0.444492</TD>
+    <TH class=3D"r =
+data">0.800154</TH></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX39></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Pseudo F Statistic" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>Pseudo F Statistic =3D</TH>
+    <TD class=3D"r =
+data">1367.86</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX40></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Approximate Expected Over-All R-Squared"=20
+  frame=3Dbox><COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>Approximate Expected Over-All =
+R-Squared=20
+    =3D</TH>
+    <TD class=3D"r =
+data">0.37501</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX41></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Cubic Clustering Criterion" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>Cubic Clustering Criterion =
+=3D</TH>
+    <TD class=3D"r =
+data">22.295</TD></TR></TBODY></TABLE></DIV></DIV><BR><BR>
+<P>
+<DIV align=3Dcenter>
+<TABLE class=3Dproctitle>
+  <TBODY>
+  <TR>
+    <TD class=3D"c proctitle">WARNING: The two values above are invalid =
+for=20
+      correlated variables.</TD></TR></TBODY></TABLE></DIV>
+<P><A name=3DIDX42></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Cluster Means" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D6 scope=3Dcolgroup>Cluster =
+Means</TH></TR>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Cluster</TH>
+    <TH class=3D"r b header" scope=3Dcol>environment</TH>
+    <TH class=3D"r b header" scope=3Dcol>cell_phone</TH>
+    <TH class=3D"r b header" scope=3Dcol>well_informed</TH>
+    <TH class=3D"r b header" scope=3Dcol>share_knowledge</TH>
+    <TH class=3D"r b header" scope=3Dcol>less_news</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>1</TH>
+    <TD class=3D"r data">0.386597540</TD>
+    <TD class=3D"r data">0.430019132</TD>
+    <TD class=3D"r data">4.538403614</TD>
+    <TD class=3D"r data">4.197869102</TD>
+    <TD class=3D"r data">4.251141553</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>2</TH>
+    <TD class=3D"r data" noWrap>-0.947656061</TD>
+    <TD class=3D"r data">0.024878123</TD>
+    <TD class=3D"r data">3.346711260</TD>
+    <TD class=3D"r data">3.122060470</TD>
+    <TD class=3D"r data">3.102941176</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>3</TH>
+    <TD class=3D"r data">0.292317402</TD>
+    <TD class=3D"r data" noWrap>-0.537403897</TD>
+    <TD class=3D"r data">4.417754569</TD>
+    <TD class=3D"r data">3.977876106</TD>
+    <TD class=3D"r =
+data">1.313829787</TD></TR></TBODY></TABLE></DIV></DIV><BR><A=20
+name=3DIDX43></A>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Fastclus: Cluster Standard Deviations" frame=3Dbox>
+  <COLGROUP>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"c b header" colSpan=3D6 scope=3Dcolgroup>Cluster =
+Standard=20
+    Deviations</TH></TR>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Cluster</TH>
+    <TH class=3D"r b header" scope=3Dcol>environment</TH>
+    <TH class=3D"r b header" scope=3Dcol>cell_phone</TH>
+    <TH class=3D"r b header" scope=3Dcol>well_informed</TH>
+    <TH class=3D"r b header" scope=3Dcol>share_knowledge</TH>
+    <TH class=3D"r b header" scope=3Dcol>less_news</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>1</TH>
+    <TD class=3D"r data">0.7639738431</TD>
+    <TD class=3D"r data">0.8843388627</TD>
+    <TD class=3D"r data">0.5976854476</TD>
+    <TD class=3D"r data">0.7017300097</TD>
+    <TD class=3D"r data">0.7421194446</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>2</TH>
+    <TD class=3D"r data">0.8592525149</TD>
+    <TD class=3D"r data">0.8498816182</TD>
+    <TD class=3D"r data">0.8603186690</TD>
+    <TD class=3D"r data">0.8994862813</TD>
+    <TD class=3D"r data">0.9238456437</TD></TR>
+  <TR>
+    <TH class=3D"l rowheader" scope=3Drow>3</TH>
+    <TD class=3D"r data">0.8532454709</TD>
+    <TD class=3D"r data">0.9868519234</TD>
+    <TD class=3D"r data">0.6968556849</TD>
+    <TD class=3D"r data">0.8790681226</TD>
+    <TD class=3D"r =
+data">0.5286001799</TD></TR></TBODY></TABLE></DIV></DIV><BR></DIV>
+<DIV class=3Dbranch>
+<P style=3D"PAGE-BREAK-AFTER: always"><BR></P>
+<HR SIZE=3D3>
+<A name=3DIDX44></A>
+<TABLE class=3Dsystitleandfootercontainer cellSpacing=3D1 =
+cellPadding=3D1 rules=3Dnone=20
+width=3D"100%" summary=3D"Page Layout" border=3D0 frame=3Dvoid>
+  <TBODY>
+  <TR>
+    <TD class=3D"c systemtitle">The SAS =
+System</TD></TR></TBODY></TABLE><BR>
+<DIV class=3D"c proctitle">The MEANS Procedure</DIV>
+<P>
+<DIV class=3D"c byline">Cluster=3D.</DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Means: Summary statistics" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Variable</TH>
+    <TH class=3D"l b header" scope=3Dcol>Label</TH>
+    <TH class=3D"r b header" scope=3Dcol>N</TH>
+    <TH class=3D"r b header" scope=3Dcol>Mean</TH>
+    <TH class=3D"r b header" scope=3Dcol>Std Dev</TH>
+    <TH class=3D"r b header" scope=3Dcol>Minimum</TH>
+    <TH class=3D"r b header" scope=3Dcol>Maximum</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">mobile_app</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">website</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">email</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">nat_geo</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">people</TH></TR>
+        <TR>
+          <TH=20
+      class=3D"l data =
+bottom_stacked_value">southern_living</TH></TR></TBODY></TABLE></TH>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">I ordered my product or =
+service=20
+            on a mobile app.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service on a website.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service using an email.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read =
+National=20
+            Geographic in the last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read People =
+in the=20
+            last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data bottom_stacked_value">Have you read =
+Southern=20
+            Living in the last 6 months?</TH></TR></TBODY></TABLE></TH>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">78</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">78</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">78</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">78</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">78</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">78</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.1923077</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0641026</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0128205</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0256410</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.0128205</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.3966644</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2465209</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.1132277</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.1590850</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.1132277</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">0</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">1.0000000</TD></TR></TBODY></TABLE></TD></TR></TBOD=
+Y></TABLE></DIV></DIV><BR><A=20
+name=3DIDX45></A>
+<DIV class=3D"c byline">Cluster=3D1</DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Means: Summary statistics" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Variable</TH>
+    <TH class=3D"l b header" scope=3Dcol>Label</TH>
+    <TH class=3D"r b header" scope=3Dcol>N</TH>
+    <TH class=3D"r b header" scope=3Dcol>Mean</TH>
+    <TH class=3D"r b header" scope=3Dcol>Std Dev</TH>
+    <TH class=3D"r b header" scope=3Dcol>Minimum</TH>
+    <TH class=3D"r b header" scope=3Dcol>Maximum</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">mobile_app</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">website</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">email</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">nat_geo</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">people</TH></TR>
+        <TR>
+          <TH=20
+      class=3D"l data =
+bottom_stacked_value">southern_living</TH></TR></TBODY></TABLE></TH>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">I ordered my product or =
+service=20
+            on a mobile app.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service on a website.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service using an email.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read =
+National=20
+            Geographic in the last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read People =
+in the=20
+            last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data bottom_stacked_value">Have you read =
+Southern=20
+            Living in the last 6 months?</TH></TR></TBODY></TABLE></TH>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">1347</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1347</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1347</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1347</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1347</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">1347</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0.0809206</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.4766147</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.1514477</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0296956</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0467706</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.0230141</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0.2728144</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.4996383</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.3586178</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.1698093</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2112256</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.1500039</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">0</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">1.0000000</TD></TR></TBODY></TABLE></TD></TR></TBOD=
+Y></TABLE></DIV></DIV><BR><A=20
+name=3DIDX46></A>
+<DIV class=3D"c byline">Cluster=3D2</DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Means: Summary statistics" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Variable</TH>
+    <TH class=3D"l b header" scope=3Dcol>Label</TH>
+    <TH class=3D"r b header" scope=3Dcol>N</TH>
+    <TH class=3D"r b header" scope=3Dcol>Mean</TH>
+    <TH class=3D"r b header" scope=3Dcol>Std Dev</TH>
+    <TH class=3D"r b header" scope=3Dcol>Minimum</TH>
+    <TH class=3D"r b header" scope=3Dcol>Maximum</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">mobile_app</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">website</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">email</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">nat_geo</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">people</TH></TR>
+        <TR>
+          <TH=20
+      class=3D"l data =
+bottom_stacked_value">southern_living</TH></TR></TBODY></TABLE></TH>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">I ordered my product or =
+service=20
+            on a mobile app.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service on a website.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service using an email.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read =
+National=20
+            Geographic in the last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read People =
+in the=20
+            last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data bottom_stacked_value">Have you read =
+Southern=20
+            Living in the last 6 months?</TH></TR></TBODY></TABLE></TH>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">915</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">915</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">915</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">915</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">915</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">915</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0.0469945</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2972678</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0972678</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0174863</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0404372</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.0229508</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0.2117429</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.4573054</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2964841</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.1311463</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.1970899</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.1498286</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">0</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">1.0000000</TD></TR></TBODY></TABLE></TD></TR></TBOD=
+Y></TABLE></DIV></DIV><BR><A=20
+name=3DIDX47></A>
+<DIV class=3D"c byline">Cluster=3D3</DIV>
+<P>
+<DIV>
+<DIV align=3Dcenter>
+<TABLE class=3Dtable borderColor=3D#c1c1c1 cellSpacing=3D0 =
+cellPadding=3D5 rules=3Dall=20
+summary=3D"Procedure Means: Summary statistics" frame=3Dbox>
+  <COLGROUP>
+  <COL>
+  <COL></COLGROUP>
+  <COLGROUP>
+  <COL>
+  <COL>
+  <COL>
+  <COL>
+  <COL></COLGROUP>
+  <THEAD>
+  <TR>
+    <TH class=3D"l b header" scope=3Dcol>Variable</TH>
+    <TH class=3D"l b header" scope=3Dcol>Label</TH>
+    <TH class=3D"r b header" scope=3Dcol>N</TH>
+    <TH class=3D"r b header" scope=3Dcol>Mean</TH>
+    <TH class=3D"r b header" scope=3Dcol>Std Dev</TH>
+    <TH class=3D"r b header" scope=3Dcol>Minimum</TH>
+    <TH class=3D"r b header" scope=3Dcol>Maximum</TH></TR></THEAD>
+  <TBODY>
+  <TR>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">mobile_app</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">website</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">email</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">nat_geo</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">people</TH></TR>
+        <TR>
+          <TH=20
+      class=3D"l data =
+bottom_stacked_value">southern_living</TH></TR></TBODY></TABLE></TH>
+    <TH class=3D"l stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TH class=3D"l data top_stacked_value">I ordered my product or =
+service=20
+            on a mobile app.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service on a website.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">I ordered my product =
+or=20
+            service using an email.</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read =
+National=20
+            Geographic in the last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data middle_stacked_value">Have you read People =
+in the=20
+            last 6 months?</TH></TR>
+        <TR>
+          <TH class=3D"l data bottom_stacked_value">Have you read =
+Southern=20
+            Living in the last 6 months?</TH></TR></TBODY></TABLE></TH>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">1160</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1160</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1160</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1160</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1160</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">1160</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0.0284483</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2706897</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0974138</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0491379</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.0672414</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.0327586</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0.1663214</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.4445077</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2966483</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2162492</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0.2505476</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">0.1780810</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">0</TD></TR>
+        <TR>
+          <TD class=3D"r data =
+bottom_stacked_value">0</TD></TR></TBODY></TABLE></TD>
+    <TD class=3D"r stacked_cell data">
+      <TABLE cellSpacing=3D0 cellPadding=3D5 width=3D"100%" border=3D0>
+        <TBODY>
+        <TR>
+          <TD class=3D"r data top_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD class=3D"r data middle_stacked_value">1.0000000</TD></TR>
+        <TR>
+          <TD=20
+    class=3D"r data =
+bottom_stacked_value">1.0000000</TD></TR></TBODY></TABLE></TD></TR></TBOD=
+Y></TABLE></DIV></DIV><BR></DIV></BODY></HTML>
