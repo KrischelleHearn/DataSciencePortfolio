@@ -5,4 +5,4 @@ In this folder, you'll find projects developed with Python. In general, these ar
 ## Contents
 * Neural Networks
 * Web Scraping
-* Pyhton Code using: Numpy, Pandas, Matplotlib, Tensorflow, Keras
+* Python Code Using: Numpy, Pandas, Matplotlib, Tensorflow, Keras
