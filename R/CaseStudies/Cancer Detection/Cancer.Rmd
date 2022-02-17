@@ -1,0 +1,357 @@
+---
+title: "Cancer"
+author: "Krischelle Joyner"
+date: "11/18/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library("ggplot2")
+library("e1071")
+library("dplyr")
+library("reshape2")
+library("corrplot")
+library("caret")
+library("pROC")
+library("gridExtra")
+library("grid")
+library("ggfortify")
+library("purrr")
+library("nnet")
+library("doParallel") # parallel processing
+
+registerDoParallel()
+require(foreach)
+require(iterators)
+require(parallel)
+```
+```{r}
+cancer <- read.csv("C:/Users/dayan/Desktop/6813/CancerData.csv")
+```
+
+lets look at the data
+```{r}
+str(cancer)
+```
+Removing columns
+```{r}
+#Remove the first column
+bc_data <- cancer[,-c(0:1)]
+
+bc_data$diagnosis <- as.factor(bc_data$diagnosis)
+
+head(bc_data)
+```
+```{r}
+sum(is.na(cancer))
+```
+```{r}
+bc_data$diagnosis <- as.factor(bc_data$diagnosis)
+head(bc_data)
+```
+
+```{r}
+summary(bc_data)
+```
+The data contains 569 records each with 31 columns.
+
+Frequency diagnosis
+```{r}
+diagnosis.table <- table(bc_data$diagnosis)
+colors <- terrain.colors(2) 
+# Create a pie chart 
+diagnosis.prop.table <- prop.table(diagnosis.table)*100
+diagnosis.prop.df <- as.data.frame(diagnosis.prop.table)
+pielabels <- sprintf("%s - %3.1f%s", diagnosis.prop.df[,1], diagnosis.prop.table, "%")
+
+pie(diagnosis.prop.table,
+  labels=pielabels,  
+  clockwise=TRUE,
+  col=colors,
+  border="gainsboro",
+  radius=0.8,
+  cex=0.8, 
+  main="frequency of cancer diagnosis")
+legend(1, .4, legend=diagnosis.prop.df[,1], cex = 0.7, fill = colors)
+```
+M= Malignant (indicates prescence of cancer cells); B= Benign (indicates abscence)
+
+357 observations which account for 62.7% of all observations indicating the absence of cancer cells, 212 which account for 37.3% of all observations shows the presence of cancerous cell.
+
+The percent is unusually large; the dataset does not represents in this case a typical medical analysis distribution. Typically, we will have a considerable large number of cases that represents negative vs. a small number of cases that represents positives (malignant) tumor.
+
+Histograms
+```{r}
+#columns into groups
+
+data_mean <- cancer[ ,c("diagnosis", "radius_mean", "texture_mean","perimeter_mean", "area_mean", "smoothness_mean", "compactness_mean", "concavity_mean", "concave.points_mean", "symmetry_mean", "fractal_dimension_mean" )]
+
+data_se <- cancer[ ,c("diagnosis", "radius_se", "texture_se","perimeter_se", "area_se", "smoothness_se", "compactness_se", "concavity_se", "concave.points_se", "symmetry_se", "fractal_dimension_se" )]
+
+data_worst <- cancer[ ,c("diagnosis", "radius_worst", "texture_worst","perimeter_worst", "area_worst", "smoothness_worst", "compactness_worst", "concavity_worst", "concave.points_worst", "symmetry_worst", "fractal_dimension_worst" )]
+
+```
+
+Plot histograms
+```{r}
+ggplot(data = melt(data_mean, id.var = "diagnosis"), mapping = aes(x = value)) + 
+    geom_histogram(bins = 10, aes(fill=diagnosis), alpha=0.5) + facet_wrap(~variable, scales =      'free_x')
+```
+By variable
+
+```{r}
+ggplot(data = melt(data_se, id.var = "diagnosis"), mapping = aes(x = value)) + 
+    geom_histogram(bins = 10, aes(fill=diagnosis), alpha=0.5) + facet_wrap(~variable, scales = 'free_x')
+```
+worst variables
+```{r}
+ggplot(data = melt(data_worst, id.var = "diagnosis"), mapping = aes(x = value)) + 
+    geom_histogram(bins = 10, aes(fill=diagnosis), alpha=0.5) + facet_wrap(~variable, scales = 'free_x')
+```
+Most of the features are normally distributed.
+
+Comparison of radius distribution by malignancy shows that there is no perfect separation between any of the features. There is a fairly good separations for concave.points_worst, concavity_worst, perimeter_worst, area_mean, perimeter_mean containing a well tight superposition for some of the values, like symmetry_se, smoothness_se .
+
+Correlation Plot
+```{r}
+corMatMy <- cor(bc_data[,2:31])
+corrplot(corMatMy, order = "hclust", tl.cex = 0.7)
+```
+There are quite a few variables that are correlated. Often we have features that are highly correlated and those provide redundant information. By eliminating highly correlated features we can avoid a predictive bias for the information contained in these features. This also shows us, that when we want to make statements about the biological/ medical importance of specific features, we need to keep in mind that just because they are suitable to predicting an outcome they are not necessarily causal - they could simply be correlated with causal factors.
+
+```{r}
+highlyCor <- colnames(bc_data)[findCorrelation(corMatMy, cutoff = 0.9, verbose = TRUE)]
+```
+```{r}
+highlyCor
+```
+```{r}
+bc_data_cor <- bc_data[, which(!colnames(bc_data) %in% highlyCor)]
+ncol(bc_data_cor)
+```
+new data frame bc_data_cor is 10 variables shorter.
+
+PCA
+```{r}
+cancer.pca <- prcomp(bc_data[, 2:31], center=TRUE, scale=TRUE)
+plot(cancer.pca, type="l", main='')
+grid(nx = 10, ny = 14)
+title(main = "Principal components weight", sub = NULL, xlab = "Components")
+box()
+```
+```{r}
+summary(cancer.pca)
+```
+The two first components explains the 0.6324 of the variance.
+
+calculate the variance
+```{r}
+pca_var <- cancer.pca$sdev^2
+pve_df <- pca_var / sum(pca_var)
+cum_pve <- cumsum(pve_df)
+pve_table <- tibble(comp = seq(1:ncol(bc_data %>% select(-diagnosis))), pve_df, cum_pve)
+
+ggplot(pve_table, aes(x = comp, y = cum_pve)) + 
+  geom_point() + 
+  geom_abline(intercept = 0.95, color = "red", slope = 0)
+```
+Need 10 principal components to explain more than 0.95 of the variance and 17 to explain more than 0.99
+
+
+```{r}
+cancer.pca2 <- prcomp(bc_data_cor, center=TRUE, scale=TRUE)
+summary(cancer.pca2)
+```
+calculate proportion variance
+```{r}
+pca_var2 <- cancer.pca2$sdev^2
+pve_df2 <- pca_var2 / sum(pca_var2)
+cum_pve2 <- cumsum(pve_df2)
+pve_table2 <- tibble(comp = seq(1:ncol(bc_data_cor)), pve_df2, cum_pve2)
+
+ggplot(pve_table2, aes(x = comp, y = cum_pve2)) + 
+  geom_point() + 
+  geom_abline(intercept = 0.95, color = "red", slope = 0)
+```
+8 PC’s explained 95% of the variance and 13 PC’S explained more than 0.99%.
+
+The features with highest dimmensions or aligned with the leading principal component are the ones with highest variance.
+```{r}
+pca_df <- as.data.frame(cancer.pca2$x)
+ggplot(pca_df, aes(x=PC1, y=PC2, col=bc_data$diagnosis)) + geom_point(alpha=0.5)
+```
+variables are the most influential on the first 2 components
+```{r}
+autoplot(cancer.pca2, data = bc_data,  colour = 'diagnosis',
+                    loadings = FALSE, loadings.label = TRUE, loadings.colour = "blue")
+```
+first 3 components
+
+Split data into training and test sets
+
+The simplest method to evaluate the performance of a machine learning algorithm is to use different training and testing datasets. I will Split the available data into a training set and a testing set. (70% training, 30% test)
+
+```{r}
+#Split data set in train 70% and test 30%
+set.seed(1234)
+df <- cbind(diagnosis = bc_data$diagnosis, bc_data_cor)
+train_indx <- createDataPartition(df$diagnosis, p = 0.7, list = FALSE)
+
+train_set <- df[train_indx,]
+test_set <- df[-train_indx,]
+
+nrow(train_set)
+```
+```{r}
+fitControl <- trainControl(method="cv",
+                            number = 5,
+                            preProcOptions = list(thresh = 0.99), # threshold for pca preprocess
+                            classProbs = TRUE,
+                            summaryFunction = twoClassSummary)
+```
+
+Random Forest
+```{r}
+model_rf <- train(diagnosis~.,
+                  data = train_set,
+                  method="rf",
+                  metric="ROC",
+                  #tuneLength=10,
+                  preProcess = c('center', 'scale'),
+                  trControl=fitControl)
+```
+
+Variable importance
+```{r}
+plot(varImp(model_rf), top = 10, main = "Random forest")
+```
+We observe that radius_worst, concave.points_mean, area_worst, area_mean, concave.points_worst, perimeter_mean, area_se and concavity_worst are the most important features. Most of them are also in the list of features with higher dimmension in the leading Principal Components plane or aligned with the leading Principal Component, PC1.
+
+
+test the data to the model
+```{r}
+pred_rf <- predict(model_rf, test_set)
+cm_rf <- confusionMatrix(pred_rf, test_set$diagnosis, positive = "M")
+cm_rf
+```
+Random Forset with PCA
+```{r}
+model_pca_rf <- train(diagnosis~.,
+                  data = train_set,
+                  method="ranger",
+                  metric="ROC",
+                  #tuneLength=10,
+                  preProcess = c('center', 'scale', 'pca'),
+                  trControl=fitControl)
+```
+```{r}
+pred_pca_rf <- predict(model_pca_rf, test_set)
+cm_pca_rf <- confusionMatrix(pred_pca_rf, test_set$diagnosis, positive = "M")
+cm_pca_rf
+```
+
+KNN Model
+```{r}
+model_knn <- train(diagnosis~.,
+                   data = train_set,
+                   method="knn",
+                   metric="ROC",
+                   preProcess = c('center', 'scale'),
+                   tuneLength=10,
+                   trControl=fitControl)
+```
+
+```{r}
+pred_knn <- predict(model_knn, test_set)
+cm_knn <- confusionMatrix(pred_knn, test_set$diagnosis, positive = "M")
+cm_knn
+```
+
+Neural network (NNET)
+```{r}
+model_nnet <- train(diagnosis~.,
+                    data = train_set,
+                    method="nnet",
+                    metric="ROC",
+                    preProcess=c('center', 'scale'),
+                    trace=FALSE,
+                    tuneLength=10,
+                    trControl=fitControl)
+```
+
+```{r}
+pred_nnet <- predict(model_nnet, test_set)
+cm_nnet <- confusionMatrix(pred_nnet, test_set$diagnosis, positive = "M")
+cm_nnet
+```
+NNET with PCA
+```{r}
+model_pca_nnet <- train(diagnosis~.,
+                    data = train_set,
+                    method="nnet",
+                    metric="ROC",
+                    preProcess=c('center', 'scale', 'pca'),
+                    tuneLength=10,
+                    trace=FALSE,
+                    trControl=fitControl)
+```
+
+```{r}
+pred_pca_nnet <- predict(model_pca_nnet, test_set)
+cm_pca_nnet <- confusionMatrix(pred_pca_nnet, test_set$diagnosis, positive = "M")
+cm_pca_nnet
+```
+
+SVM 
+```{r}
+model_svm <- train(diagnosis~.,
+                    data = train_set,
+                    method="svmRadial",
+                    metric="ROC",
+                    preProcess=c('center', 'scale'),
+                    trace=FALSE,
+                    trControl=fitControl)
+```
+
+```{r}
+pred_svm <- predict(model_svm, test_set)
+cm_svm <- confusionMatrix(pred_svm, test_set$diagnosis, positive = "M")
+cm_svm
+```
+
+Model Evaluation
+```{r}
+model_list <- list(RF=model_rf, PCA_RF=model_pca_rf, 
+                   NNET=model_nnet, PCA_NNET=model_pca_nnet,  
+                   KNN = model_knn, SVM=model_svm)
+resamples <- resamples(model_list)
+```
+
+```{r}
+bwplot(resamples, metric = "ROC")
+```
+
+The ROC metric measure the auc of the roc curve of each model. This metric is independent of any threshold.
+
+We see here that some models have a great variability (PCA_RF,RF). The model PCA_NNET achieve a great auc with some variability.
+
+Let’s remember how these models result with the testing dataset
+```{r}
+cm_list <- list(RF=cm_rf, PCA_RF=cm_pca_rf, 
+                    PCA_NNET=cm_pca_nnet,  
+                   KNN = cm_knn, SVM=cm_svm)
+
+results <- sapply(cm_list, function(x) x$byClass)
+results
+```
+The best results for sensitivity (detection of breast cases) is PCA_NNET which also has a great score.
+
+The feature analysis show that there are few features with more predictive value for the diagnosis. The observations were confirmed by the PCA analysis, showing that the same features are aligned to main principal component.
+
+We have found a model based on neural network and PCA preprocessed data with good results over the test set. This model has a sensitivity of 0.984 with a F1 score of 0.968.
+
+
