@@ -1,8 +1,8 @@
 # Python Projects
 
-In this folder, you'll find projects developed with Python. In general, these are intended to demonstrate how I may manipulate data for business applications.
+The projects included in this folder demonstrate how I may analyze data and identify patterns and trends using Python.
 
 ## Contents
 * Neural Networks
 * Web Scraping
-* Python Code Using: Numpy, Pandas, Matplotlib, Tensorflow, Keras
+* Python Code Using: Numpy, Pandas, Matplotlib, Scikit-learn, Keras
