@@ -1,0 +1,562 @@
+---
+title: "Dow Jones Case Study"
+author: "Charles Reyes"
+date: "10/31/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = "C:/Users/Krischelle/Documents/Krischelles most important stuff/Publish/Books and Learning/UTSA/Fall 2021 Classes/Data Analytics Applications/Case Studies/Dow Jones Case Study/")
+library(ggplot2); library(reshape2); library(dplyr); library(wesanderson); library(tidyverse); library(e1071); library(tree); library(quantmod)
+```
+
+Reading data
+
+```{r}
+dow_jones_1 = read.csv("dow_jones_index.data", header = TRUE)
+
+dow_jones_2 = dow_jones_1
+
+DJIDta = read.csv("DJI.csv", header = TRUE, sep = ",")
+```
+
+Viewing structure of data.
+
+```{r}
+str(dow_jones_1)
+``` 
+
+Cleaning data:
+
+- Converting all currency variables from text to numeric
+- Converting `date` variable from text to date
+- Converting `stock` variable from character to factor
+
+```{r}
+dow_jones_1$open = as.numeric(gsub("\\$", "", dow_jones_1$open))
+dow_jones_1$high = as.numeric(gsub("\\$", "", dow_jones_1$high))
+dow_jones_1$low = as.numeric(gsub("\\$", "", dow_jones_1$low))
+dow_jones_1$close = as.numeric(gsub("\\$", "", dow_jones_1$close))
+dow_jones_1$next_weeks_open = as.numeric(gsub("\\$", "", dow_jones_1$next_weeks_open))
+dow_jones_1$next_weeks_close = as.numeric(gsub("\\$", "", dow_jones_1$next_weeks_close))
+dow_jones_1$date = as.Date(dow_jones_1$date, "%m/%d/%Y")
+dow_jones_1$stock = as.factor(dow_jones_1$stock)
+```
+
+```{r}
+str(dow_jones_1)
+```
+
+Viewing summary of data
+
+```{r}
+summary(dow_jones_1)
+```
+
+Sorting data by `stock` and `date`
+
+```{r}
+dow_jones_1 = dow_jones_1[order(dow_jones_1$stock, dow_jones_1$date), ]
+```
+
+Removing rows with null values to check correlation
+
+```{r}
+dow_jones_new = dow_jones_1[dow_jones_1$date != as.Date("2011-01-07"), ]
+```
+
+Checking correlation of data
+
+```{r}
+cor(dow_jones_new[ , 4:16])
+```
+
+Creating heat map to visualize correlation
+
+```{r}
+dow_jones_cor = melt(round(cor(dow_jones_new[ , 4:16]), 2))
+ggplot(data = dow_jones_cor, aes(x = Var1, y = Var2, fill = value)) + 
+  geom_tile() +
+  scale_fill_gradientn(colours = wes_palette("Zissou1", 100, type = "continuous")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+Removing highly correlated variables not needed for analysis
+
+```{r}
+dow_jones_new2 = dow_jones_new[ , -c(1, 4:6, 11:13)]
+str(dow_jones_new2)
+```
+
+Lag plots for remaining highly correlated variable
+
+```{r}
+lag.plot(dow_jones_new2$close, pch = ".", set.lags = 1:4)
+```
+
+Lag 1 looks to be the best
+
+Creating lag 1 variables in data set
+
+```{r}
+dow_jones_lag = dow_jones_new2 %>%                            
+  group_by(stock) %>%
+  dplyr::mutate(close_lag1 = lag(close, n = 1, default = NA))
+```
+
+Removing rows with null values to check correlation
+
+```{r}
+dow_jones_lag_new = dow_jones_lag[dow_jones_lag$date != as.Date("2011-01-07"), ]
+dow_jones_lag_new = dow_jones_lag_new[dow_jones_lag_new$date != as.Date("2011-01-14"), ]
+```
+
+Creating heat map to visualize correlation again after removing variables
+
+```{r}
+dow_jones_lag_cor = melt(round(cor(dow_jones_lag_new[ , 3:10]), 2))
+ggplot(data = dow_jones_lag_cor, aes(x = Var1, y = Var2, fill = value)) + 
+  geom_tile() +
+  scale_fill_gradientn(colours = wes_palette("Zissou1", 100, type = "continuous")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+Creating final data set to use for analysis
+
+```{r}
+dow_jones_final = dow_jones_1[ , -c(4:6, 11:13)]
+
+dow_jones_final = dow_jones_final %>%                            
+  group_by(stock) %>%
+  dplyr::mutate(close_lag1 = lag(close, n = 1, default = NA))
+```
+
+```{r}
+str(dow_jones_final)
+```
+
+Splitting data into train and test data sets
+
+```{r}
+train = dow_jones_final[dow_jones_final$quarter == 1, ]
+# Removing quarter column
+train = train[ , -1]
+
+# not sure if we should remove 1st row of data since it has null values; leaving in for now
+# train = train[train$date != as.Date("2011-01-07"), ]
+
+test = dow_jones_final[dow_jones_final$quarter == 2, ]
+# Removing quarter column
+test = test[ , -1]
+
+train1 = split(train, train$stock)
+
+test1 = split(test, test$stock)
+```
+
+# Linear Regression model
+
+```{r}
+glmfxn = function (trainstock, teststock, formula) {
+    set.seed(123)
+    glmfit = glm(formula, data = trainstock)
+    linear.predict = predict.glm(glmfit, newdata = teststock)
+    linear.predict = ifelse(linear.predict >= mean(linear.predict), "1", "0")
+    linear.actual = ifelse(teststock$percent_change_next_weeks_price >= mean(teststock$percent_change_next_weeks_price), "1", "0")
+
+  confusion = caret::confusionMatrix(as.factor(linear.actual), as.factor(linear.predict))
+
+    print(confusion$overall)
+    print(summary(glmfit))
+
+  }
+
+formula = percent_change_next_weeks_price ~ close_lag1 + percent_return_next_dividend + volume 
+
+for (l in names(train1))
+
+{
+  x = train1[[l]]
+  y = test1[[l]]
+ glmfxn(x, y, formula)
+  namefilmodel = paste0("Linear_Accuracy ", l)
+  print(namefilmodel)
+  
+  }
+```
+
+# Decision Tree
+
+```{r}
+treefxn = function(trainstock, teststock, formula){
+  set.seed(123)
+ 
+  treefit = tree(formula, data = trainstock)
+ 
+  tree.predict = predict(treefit, newdata = teststock)
+ 
+  tree.predict = ifelse(tree.predict >= mean(tree.predict), 1, 0)
+ 
+  tree.obs = ifelse(teststock$percent_change_next_weeks_price >= mean(teststock$percent_change_next_weeks_price ), 1, 0)
+  table = table(tree.obs, tree.predict); print(summary(treefit))
+ 
+  accuracy = sum(diag(table))/12
+ 
+  print(accuracy)
+}
+
+formula = percent_change_next_weeks_price ~ close_lag1 + percent_return_next_dividend + volume
+
+for (i in names(train1)){
+  x = train1[[i]]
+  y = test1[[i]]
+  treefxn(x, y, formula)
+}
+```
+
+# SVR Radial Model
+
+```{r}
+svmfxn = function(trainstock, teststock, formula){
+  set.seed(123)
+ 
+  svmfit = svm(formula, data = trainstock, kernerl = "radial", cost = 0.1, gamma = 0.01)
+ 
+  svm.predict = predict(svmfit, newdata = teststock, type = "class")
+ 
+  svm.predict = ifelse(svm.predict >= mean(svm.predict), 1, 0)
+ 
+  svm.obs = ifelse(teststock$percent_change_next_weeks_price >= mean(teststock$percent_change_next_weeks_price ),1,0)
+  table = table(svm.obs, svm.predict)
+ 
+  accuracy = sum(diag(table))/12
+  print(summary(svmfit))
+  print(accuracy)
+}
+
+formula = percent_change_next_weeks_price ~ close_lag1 + percent_return_next_dividend + volume
+
+for (i in names(train1)){
+  x= train1[[i]]
+  y= test1[[i]]
+  svmfxn(x, y, formula)
+}
+```
+
+# CAPM and stock risk and reward calculations
+
+Numeric conversion
+```{r}
+dow_jones_2$open=as.numeric(gsub("\\$","",dow_jones_2$open))
+dow_jones_2$high=as.numeric(gsub("\\$","",dow_jones_2$high))
+dow_jones_2$low=as.numeric(gsub("\\$","",dow_jones_2$low))
+dow_jones_2$close=as.numeric(gsub("\\$","",dow_jones_2$close))
+dow_jones_2$next_weeks_open=as.numeric(gsub("\\$","",dow_jones_2$next_weeks_open))
+dow_jones_2$next_weeks_close=as.numeric(gsub("\\$","",dow_jones_2$next_weeks_close))
+
+DowJData3 <- split(dow_jones_2, dow_jones_2$stock)
+
+ReturnDJI = na.omit(DJIDta[,5]) 
+
+ReturnAA = na.omit(Delt(DowJData3$AA[,7])); ReturnAA
+```
+
+```{r}
+ReturnAXP = na.omit(Delt(DowJData3$AXP[,7]))
+ReturnBA = na.omit(Delt(DowJData3$BA[,7]))
+ReturnBAC = na.omit(Delt(DowJData3$BAC[,7]))
+ReturnCAT = na.omit(Delt(DowJData3$CAT[,7]))
+ReturnCSCO = na.omit(Delt(DowJData3$CSCO[,7]))
+ReturnCVX = na.omit(Delt(DowJData3$CVX[,7]))
+ReturnDD = na.omit(Delt(DowJData3$DD[,7]))
+ReturnDIS = na.omit(Delt(DowJData3$DIS[,7]))
+ReturnGE = na.omit(Delt(DowJData3$GE[,7]))
+ReturnHD = na.omit(Delt(DowJData3$HD[,7]))
+ReturnHPQ = na.omit(Delt(DowJData3$HPQ[,7]))
+ReturnIBM = na.omit(Delt(DowJData3$IBM[,7]))
+ReturnINTC = na.omit(Delt(DowJData3$INTC[,7]))
+ReturnJNJ = na.omit(Delt(DowJData3$JNJ[,7]))
+ReturnJPM = na.omit(Delt(DowJData3$JPM[,7]))
+ReturnKO = na.omit(Delt(DowJData3$KO[,7]))
+ReturnKRFT = na.omit(Delt(DowJData3$KRFT[,7]))
+ReturnMCD = na.omit(Delt(DowJData3$MCD[,7]))
+ReturnMMM = na.omit(Delt(DowJData3$MMM[,7]))
+ReturnMRK = na.omit(Delt(DowJData3$MRK[,7]))
+ReturnMSFT = na.omit(Delt(DowJData3$MSFT[,7]))
+ReturnPFE = na.omit(Delt(DowJData3$PFE[,7]))
+ReturnPG = na.omit(Delt(DowJData3$PG[,7]))
+ReturnT = na.omit(Delt(DowJData3$T[,7]))
+ReturnTRV = na.omit(Delt(DowJData3$TRV[,7]))
+ReturnUTX = na.omit(Delt(DowJData3$UTX[,7]))
+ReturnWMT= na.omit(Delt(DowJData3$WMT[,7]))
+ReturnVZ = na.omit(Delt(DowJData3$VZ[,7]))
+ReturnXOM = na.omit(Delt(DowJData3$XOM[,7]))
+```
+
+```{r}
+MyData = cbind(ReturnDJI,
+               ReturnAA,
+               ReturnAXP,
+               ReturnBA, 
+               ReturnBAC,
+               ReturnCAT,
+               ReturnCSCO,
+               ReturnCVX,
+               ReturnDD,
+               ReturnDIS,
+               ReturnGE,
+               ReturnHD,
+               ReturnHPQ,
+               ReturnIBM,
+               ReturnINTC,
+               ReturnJNJ,
+               ReturnJPM,
+               ReturnKO,
+               ReturnKRFT,
+               ReturnMCD,
+               ReturnMMM,
+               ReturnMRK,
+               ReturnMSFT,
+               ReturnPFE,
+               ReturnPG,
+               ReturnT,
+               ReturnTRV,
+               ReturnUTX,
+               ReturnWMT,
+               ReturnVZ,
+               ReturnXOM)
+               
+colnames(MyData) = c("DJI", "AA", "AXP", "BA", "BAC", "CAT", "CSCO", "CVX", "DD", "DIS", "GE", "HD", "HPQ", "IBM", "INTC", "JNJ", "JPM", "KO", "KRFT", "MCD", "MMM", "MRK", "MSFT", "PFE", "PG", "T", "TRV", "UTX", "WMT", "VZ", "XOM")
+head(MyData)
+```
+
+```{r}
+str(MyData)
+```
+
+Compute mean and standard deviation
+
+```{r}
+DataMean = apply(MyData, 2, mean)
+DataSD = apply(MyData, 2, sd)
+
+cbind(DataMean, DataSD)
+```
+
+```{r}
+#1
+lm.AA <- lm(AA~ DJI, data = as.data.frame(MyData))
+#2
+lm.AXP <- lm(AXP~ DJI, data = as.data.frame(MyData))
+#3
+lm.BA <- lm(BA~ DJI, data = as.data.frame(MyData))
+#4
+lm.BAC <- lm(BAC~ DJI, data = as.data.frame(MyData))
+#5
+lm.CAT <- lm(CAT~ DJI, data = as.data.frame(MyData))
+#6
+lm.CSCO <- lm(CSCO~ DJI, data = as.data.frame(MyData))
+#7
+lm.CVX <- lm(CVX~ DJI, data = as.data.frame(MyData))
+#8
+lm.DD <- lm(DD~ DJI, data = as.data.frame(MyData))
+#9
+lm.DIS <- lm(DIS~ DJI, data = as.data.frame(MyData))
+#10
+lm.GE <- lm(GE~ DJI, data = as.data.frame(MyData))
+#11
+lm.HD <- lm(HD~ DJI, data = as.data.frame(MyData))
+#12
+lm.HPQ <- lm(HPQ~ DJI, data = as.data.frame(MyData))
+#13
+lm.IBM <- lm(IBM~ DJI, data = as.data.frame(MyData))
+#14
+lm.INTC <- lm(INTC~ DJI, data = as.data.frame(MyData))
+#15
+lm.JNJ <- lm(JNJ~ DJI, data = as.data.frame(MyData))
+#16
+lm.JPM <- lm(JPM~ DJI, data = as.data.frame(MyData))
+#17
+lm.KO <- lm(KO~ DJI, data = as.data.frame(MyData))
+#18
+lm.KRFT <- lm(KRFT~ DJI, data = as.data.frame(MyData))
+#19
+lm.MCD <- lm(MCD~ DJI, data = as.data.frame(MyData))
+#20
+lm.MMM <- lm(MMM~ DJI, data = as.data.frame(MyData))
+#21
+lm.MRK <- lm(MRK~ DJI, data = as.data.frame(MyData))
+#22
+lm.MSFT <- lm(MSFT~ DJI, data = as.data.frame(MyData))
+#23
+lm.PFE <- lm(PFE~ DJI, data = as.data.frame(MyData))
+#24
+lm.PG <- lm(PG~ DJI, data = as.data.frame(MyData))
+#25
+lm.T <- lm(T~ DJI, data = as.data.frame(MyData))
+#26
+lm.TRV <- lm(TRV~ DJI, data = as.data.frame(MyData))
+#27
+lm.UTX <- lm(UTX~ DJI, data = as.data.frame(MyData))
+#28
+lm.WMT <- lm(WMT~ DJI, data = as.data.frame(MyData))
+#29
+lm.VZ <- lm(VZ~ DJI, data = as.data.frame(MyData))
+#30
+lm.XOM <- lm(XOM~ DJI, data = as.data.frame(MyData))
+```
+
+```{r}
+BetaDowJ = summary(lm.AA)$coefficient[2,1]
+paste("Beta of AA:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.AXP)$coefficient[2,1]
+paste("Beta of AXP:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.BA)$coefficient[2,1]
+paste("Beta of BA:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.BAC)$coefficient[2,1]
+paste("Beta of BAC:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.CAT)$coefficient[2,1]
+paste("Beta of CAT:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.CSCO)$coefficient[2,1]
+paste("Beta of CSCO:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.CVX)$coefficient[2,1]
+paste("Beta of CVX:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.DD)$coefficient[2,1]
+paste("Beta of DD:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.DIS)$coefficient[2,1]
+paste("Beta of DIS:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.GE)$coefficient[2,1]
+paste("Beta of GE:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.HD)$coefficient[2,1]
+paste("Beta of HD:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.HPQ)$coefficient[2,1]
+paste("Beta of HPQ:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.IBM)$coefficient[2,1]
+paste("Beta of IBM:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.INTC)$coefficient[2,1]
+paste("Beta of INTC:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.JNJ)$coefficient[2,1]
+paste("Beta of JNJ:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.JPM)$coefficient[2,1]
+paste("Beta of JPM:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.KO)$coefficient[2,1]
+paste("Beta of KO:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.KRFT)$coefficient[2,1]
+paste("Beta of KRFT:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.MCD)$coefficient[2,1]
+paste("Beta of MCD:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.MMM)$coefficient[2,1]
+paste("Beta of MMM:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.MRK)$coefficient[2,1]
+paste("Beta of MRK:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.MSFT)$coefficient[2,1]
+paste("Beta of MSFT:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.PFE)$coefficient[2,1]
+paste("Beta of PFE:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.PG)$coefficient[2,1]
+paste("Beta of PG:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.T)$coefficient[2,1]
+paste("Beta of T:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.TRV)$coefficient[2,1]
+paste("Beta of TRV:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.UTX)$coefficient[2,1]
+paste("Beta of UTX:" , BetaDowJ)
+```
+
+```{r}
+
+BetaDowJ <- summary(lm.WMT)$coefficient[2,1]
+paste("Beta of WMT:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.VZ)$coefficient[2,1]
+paste("Beta of VZ:" , BetaDowJ)
+```
+
+```{r}
+BetaDowJ <- summary(lm.XOM)$coefficient[2,1]
+paste("Beta of XOM:" , BetaDowJ)
+```
+
+
+
