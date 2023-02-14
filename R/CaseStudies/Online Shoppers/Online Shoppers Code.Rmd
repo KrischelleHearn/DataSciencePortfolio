@@ -1,0 +1,243 @@
+---
+title: "Final Case Study Proposal"
+author: "Krischelle Joyner"
+date: "9/12/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r warning=FALSE, message=FALSE, echo = FALSE}
+library(tidyverse)
+library(ggplot2)
+library(gridExtra)
+library(GGally)
+library(caret)
+library(randomForest)
+library(mltools)
+library(e1071)
+library(dplyr)
+library(naivebayes)
+```
+
+
+```{r}
+shop <- read.csv("C:/Users/Krischelle/Documents/Krischelles most important stuff/Publish/Books and Learning/UTSA/Fall 2021 Classes/Data Analytics Applications/Case Studies/My Proposal/online_shoppers_intention.csv", header = TRUE)
+```
+
+
+```{r}
+str(shop)
+```
+I'm removing any duplicate values. 
+
+```{r}
+number_duplicate <- nrow(shop[duplicated(shop),])
+shop <- shop[!duplicated(shop),]
+str(shop)
+```
+I'm checking for any missing values, and I don't find any.
+
+```{r}
+anyNA(shop)
+```
+
+The “Month” attribute contains 10 months excluding January and April. Changing “June” to “Jun” with make plotting easier.
+
+```{r}
+shop$Month <- as.character(shop$Month)
+shop$Month[shop$Month == "June"] <- "Jun"
+shop$Month <- as.factor(shop$Month)
+shop$Month = factor(shop$Month, levels = month.abb)
+```
+
+############# Exploratory Data Analysis ######################################
+
+According to our six page attributes, customers visited different types of pages and spent most of their time looking at related products. Only a small fraction of visitors chose to dig into information about one product.The median values are as follows - # of Administrative pages visited: 1, Time spent in Administrative pages: 9, Number of Informational pages visited: 0, Time spent in Informational pages: 0, Number of ProductRelated pages visited: 18, Time spent in ProductRelated pages: 608.9  
+
+```{r}
+plot1 <- ggplot(shop, aes(x=1, y=Administrative)) + geom_violin() + geom_violin(trim=FALSE, fill='#a53c91', color='black') + coord_flip() + labs(x = " ") + labs(y = "Number of Administrative pages visited") + theme(axis.text.y = element_blank(), axis.ticks = element_blank())
+plot2 <- ggplot(shop, aes(x=1, y=Administrative_Duration)) + geom_violin() + geom_violin(trim=FALSE, fill='#a53c91', color='black') + coord_flip() + labs(x = " ") + labs(y = "Total time spent in Administrative pages") + theme(axis.text.y = element_blank(), axis.ticks = element_blank())
+plot3 <- ggplot(shop, aes(x=1, y=Informational)) + geom_violin() + geom_violin(trim=FALSE, fill='#329f91', color='black') + coord_flip() + labs(x = " ") + labs(y = "Number of Informational pages visited") + theme(axis.text.y = element_blank(), axis.ticks = element_blank())
+plot4 <- ggplot(shop, aes(x=1, y=Informational_Duration)) + geom_violin() +  geom_violin(trim=FALSE, fill='#329f91', color='black') + coord_flip() + labs(x = " ") + labs(y = "Total time spent in Informational pages") + theme(axis.text.y = element_blank(), axis.ticks = element_blank())
+plot5 <- ggplot(shop, aes(x=1, y=ProductRelated)) + geom_violin() + geom_violin(trim=FALSE, fill='#f0ac09', color='black') + coord_flip() + labs(x = " ") + labs(y = "Number of ProductRelated pages visited") + theme(axis.text.y = element_blank(), axis.ticks = element_blank())
+plot6 <- ggplot(shop, aes(x=1, y=ProductRelated_Duration)) + geom_violin() + geom_violin(trim=FALSE, fill='#f0ac09', color='black') + coord_flip() + labs(x = " ") + labs(y = "Total time spent in ProductRelated pages") + theme(axis.text.y = element_blank(), axis.ticks = element_blank())
+grid.arrange(plot1, plot2, plot3, plot4, plot5, plot6, nrow = 3, ncol = 2)
+```
+
+It is surprising that most of the customers who completed transactions spent more time browsing Administrative and ProductRelated pages than Informational pages, since this indicates that they are loyal customers who checked out after adding items to their carts.
+
+```{r}
+plot1 <- ggplot(shop, aes(x=Revenue, y=Administrative)) + geom_violin() + geom_violin(trim=FALSE, fill='#a53c91', color='black') + labs(x = "Administrative") + labs(y = " ") + theme(axis.text.y = element_blank(), axis.ticks = element_blank())
+plot4 <- ggplot(shop, aes(x=Revenue, y=Administrative_Duration)) + geom_violin() + geom_violin(trim=FALSE, fill='#a53c91', color='black') + labs(x = "Administrative_Duration") + labs(y = " ") + theme(axis.text.y = element_blank(), axis.ticks = element_blank())
+plot2 <- ggplot(shop, aes(x=Revenue, y=Informational)) + geom_violin() + geom_violin(trim=FALSE, fill='#329f91', color='black') + labs(x = "Informational") + labs(y = " ") + theme(axis.text.y = element_blank(), axis.ticks = element_blank())
+plot5 <- ggplot(shop, aes(x=Revenue, y=Informational_Duration)) + geom_violin() +  geom_violin(trim=FALSE, fill='#329f91', color='black') + labs(x = "Informational_Duration") + labs(y = " ") + theme(axis.text.y = element_blank(), axis.ticks = element_blank())
+plot3 <- ggplot(shop, aes(x=Revenue, y=ProductRelated)) + geom_violin() + geom_violin(trim=FALSE, fill='#f0ac09', color='black') + labs(x = "ProductRelated") + labs(y = " ") + theme(axis.text.y = element_blank(), axis.ticks = element_blank())
+plot6 <- ggplot(shop, aes(x=Revenue, y=ProductRelated_Duration)) + geom_violin() + geom_violin(trim=FALSE, fill='#f0ac09', color='black') + labs(x = "ProductRelated_Duration") + labs(y = " ") + theme(axis.text.y = element_blank(), axis.ticks = element_blank())
+grid.arrange(plot1, plot2, plot3, plot4, plot5, plot6, nrow = 2, ncol = 3)
+```
+
+BounceRates, ExitRates, and PageValues provide insights into the behavior of customers viewing pages. There doesn't appear to be a significant difference in revenue when examining customers' BounceRates. On the other hand, when looking at ExitRates, the plot shows that customers who bought an item are in general less likely to leave than customers who did not buy an item, since they spent more time on the pages. The Pagevalues of non-purchasing customers are much lower than those of purchasing customers because they spend less time on related pages.
+
+```{r}
+plot1 <- ggplot(shop, aes(x=BounceRates, fill=Revenue)) + geom_density(alpha=0.4) + labs(y = " ")
+plot2 <- ggplot(shop, aes(x=ExitRates, fill=Revenue)) + geom_density(alpha=0.4) + labs(y = " ")
+plot3 <- ggplot(shop, aes(x=PageValues, fill=Revenue)) + geom_density(alpha=0.4) + labs(y = " ")
+grid.arrange(plot1, plot2, plot3, nrow = 3)
+```
+On non-special days, purchasing customers were more likely to make purchases. This supports our observation that most customer decisions are not influenced by whether it is a special day or not.
+
+```{r}
+plot1 <- ggplot(shop, aes(x = factor(1), y = SpecialDay)) + geom_boxplot(width = 0.4, fill = "white") + geom_jitter(color = "dark green", width = 0.1, size = 1, alpha=0.4) + labs(x = "Special Day") + labs(y = "Closeness") + theme(axis.text.x = element_blank(), axis.ticks = element_blank())
+plot2 <- ggplot(shop, aes(x = Revenue, y = SpecialDay)) + geom_boxplot(width = 0.4, fill = "white") + geom_jitter(color = "dark green", width = 0.2, size = 1, alpha=0.4) + labs(x = "Special Day") + labs(y = " ") + theme(axis.ticks = element_blank())
+grid.arrange(plot1, plot2, ncol = 2)
+```
+
+It should be noted that the month attribute displays only 10 of the 12 months, excluding January and April. The majority of shopping took place during March, May, November, and December. This might be due to these months being right before a new season.
+
+```{r}
+plot <- ggplot(data.frame(shop), aes(Month, fill=Revenue)) + geom_bar() + labs(x = "Month") + labs(y = " ")
+plot
+```
+Without knowing the numbers, the Operating Systems, Browser, Region, and Traffic Type attributes are not much help. The Weekend attribute shows more purchases on weekdays, while the Visitor Type is mostly return customers.
+
+```{r}
+plot1 <- ggplot(data.frame(shop), aes(OperatingSystems, fill=Revenue)) + geom_bar() + labs(x = "Operating Systems") + labs(y = " ") + scale_x_continuous(breaks = 1:8)
+plot2 <- ggplot(data.frame(shop), aes(Browser, fill=Revenue)) + geom_bar() + labs(x = "Browser") + labs(y = " ") + scale_x_continuous(breaks = 1:13)
+plot3 <- ggplot(data.frame(shop), aes(Region, fill=Revenue)) + geom_bar() + labs(x = "Region") + labs(y = " ") + scale_x_continuous(breaks = 1:9)
+plot4 <- ggplot(data.frame(shop), aes(TrafficType, fill=Revenue)) + geom_bar() + labs(x = "Traffic Type") + labs(y = " ")
+plot5 <- ggplot(data.frame(shop), aes(Weekend, fill=Revenue)) + geom_bar() + labs(x = "Weekend") + labs(y = " ")
+plot6 <- ggplot(data.frame(shop), aes(VisitorType, fill=Revenue)) + geom_bar() + labs(x = "Visitor Type") + labs(y = " ") + scale_x_discrete(labels = c("New_Visitor" = "New", "Other" = "Other", "Returning_Visitor" = "Return"))
+grid.arrange(plot1, plot2, plot3, plot4, plot5, plot6, nrow = 3, ncol = 2)
+```
+
+Checking correlations among variables in the data set. I see several high-correlated pairs like BounceRates/ExitRates and ProductRelated/ProductRelated_Duration that are evident; one of each pair might be dropped because of its importance to our model.
+
+```{r}
+corr_map <- ggcorr(shop[, 1:10], method=c("everything", "pearson"), label=TRUE, hjust = .90, size = 3, layout.exp = 2)
+corr_map
+```
+######### Data Processing ###########################################
+
+Updating the variables to factors and integers for later use in my models.
+
+```{r}
+shop$OperatingSystems = as.factor(shop$OperatingSystems)
+shop$Browser = as.factor(shop$Browser)
+shop$Region = as.factor(shop$Region)
+shop$TrafficType = as.factor(shop$TrafficType)
+shop$VisitorType = as.factor(shop$VisitorType)
+shop$Weekend = as.integer(shop$Weekend)
+shop$Revenue = as.integer(shop$Revenue)
+```
+
+I removed the following variables due to high correlations or limited information from the data set origin: ProductRelated, BounceRatesRates, OperatingSystems, Browser, Region, TrafficType. 
+
+```{r}
+shop2 = shop
+shop2 = shop2[c(1:4, 6, 8:11, 16:18)]
+shop2$Revenue = as.factor(shop2$Revenue)
+```
+
+```{r}
+str(shop2)
+```
+
+
+```{r}
+set.seed(123)
+inTrain <- createDataPartition(y = shop2$Revenue, p=0.8, list=FALSE)
+shop2.train <- shop2[inTrain, ]
+shop2.test <- shop2[-inTrain, ]
+```
+
+Logistic Regression Model
+
+```{r}
+logit.m1 = glm(Revenue ~ ., data = shop2.train, family = binomial)
+summary(logit.m1)
+```
+
+```{r}
+logit.pred = predict(logit.m1, newdata = shop2.test, type = "response")
+logit.pred.class = ifelse(logit.pred >= 0.5, 1, 0)
+caret::confusionMatrix(as.factor(logit.pred.class), shop2.test$Revenue)
+```
+
+Logistic Regression Model with 5-fold Cross Validation
+
+```{r}
+train_ctrl = trainControl(method = "cv", number = 5)
+
+logit.m2 = train(Revenue ~ ., data = shop2.train, method = "glm", trControl = train_ctrl)
+summary(logit.m2)
+```
+
+```{r}
+logit.pred2 = predict(logit.m2, newdata = shop2.test)
+caret::confusionMatrix(logit.pred2, shop2.test$Revenue)
+```
+Logistic Regression Model with 5-fold repeated cross-validation
+
+```{r}
+train_ctrl2 = trainControl(method = "repeatedcv", number = 5)
+
+logit.m3 = train(Revenue ~ ., data = shop2.train, method = "glm", trControl = train_ctrl2)
+summary(logit.m3)
+```
+
+```{r}
+logit.pred3 = predict(logit.m3, newdata = shop2.test)
+caret::confusionMatrix(logit.pred3, shop2.test$Revenue)
+```
+```{r}
+varImp(logit.m3)
+```
+
+
+I can see that the significant variables are ProductRelated_Duration, Exit Rates, PageValues, MonthJul, MonthAug, MonthNov, and VisitorTypeReturning_Visitor.
+These are shown in all three logistic models, however removing the insignificant variables still gives the same outcome. 
+
+
+Random Forest Model
+
+```{r}
+set.seed(123)
+RF1 <- train(Revenue ~ ., data = shop2.train, method='rf', importance=TRUE)
+RF1$finalModel
+RF1Rev.preds <- predict(RF1, shop2.test)
+confusionMatrix(RF1Rev.preds, shop2.test$Revenue)
+```
+Random Forest Variable Importance
+
+```{r}
+varImp(RF1)
+```
+
+
+Naive Bayes Model
+
+```{r}
+set.seed(123)
+NB1 <- naiveBayes(Revenue ~ ., data = shop2.train)
+```
+
+```{r}
+NB1.preds <- predict(NB1, newdata = shop2.test)
+confusionMatrix(NB1.preds, shop2.test$Revenue)
+```
+
+
+
+
+
+
+
+
+
+
+
+
