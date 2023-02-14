@@ -1,0 +1,475 @@
+---
+title: "Customer Acquisition and Retention"
+author: "Dayanira Mendoza"
+date: "11/11/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("SMCRM"); library("PerformanceAnalytics"); library("caret"); library("e1071"); library("car"); library("randomForestSRC"); library("dplyr"); library("jtools"); library("RGtk2"); library("rattle")
+```
+
+
+Use acquisitionRetention data set to predict which customers will be acquired and for how long (duration) based on a feature set using a random forest.
+
+The first step is exploratory data analysis.
+```{r}
+data(acquisitionRetention)
+
+```
+
+```{r}
+df1 <- acquisitionRetention 
+```
+
+```{r}
+str(df1)
+```
+We have 500 observations across 15 variables. We will be working with two target variables. First, acquisition, and industry which will be factor variables. Second, duration, which will remain numerical. Customer is not useful to us, so no reason to keep it.
+
+```{r}
+df1$customer <- NULL
+```
+
+summary
+```{r}
+summary(df1)
+```
+Variables: duration, profit, ret_exp, acq_exp_sq, ret_exp_sq, freq, freq_sq, crossbuy, sow
+
+Na Values
+```{r}
+sum(is.na(df1))
+```
+
+```{r}
+chart.Correlation(df1, histogram = TRUE, pch=19)
+```
+```{r}
+par(mfrow=c(2,3))
+boxplot(duration ~ acquisition, data=df1, ylab='duration', xlab='acquisition', col='#FF0000')
+boxplot(profit ~ acquisition, data=df1, ylab='profit', xlab='acquisition', col='#FF3300')
+boxplot(ret_exp ~ acquisition, data=df1, ylab='ret_exp', xlab='acquisition', col='#CC9933')
+boxplot(acq_exp ~ acquisition, data=df1, ylab='acq_exp', xlab='acquisition', col='#33CC00')
+boxplot(ret_exp ~ acquisition, data=df1, ylab='ret_exp', xlab='acquisition', col='#99CCFF')
+boxplot(ret_exp_sq ~ acquisition, data=df1, ylab='ret_exp_sq', xlab='acquisition', col='#99CCFF')
+boxplot(freq ~ acquisition, data=df1, ylab='freq', xlab='acquisition', col='#0000CC')
+boxplot(freq_sq ~ acquisition, data=df1, ylab='freq_sq', xlab='acquisition', col='#0000CC')
+boxplot(crossbuy ~ acquisition, data=df1, ylab='crossbuy', xlab='acquisition', col='#9900FF')
+boxplot(sow ~ acquisition, data=df1, ylab='sow', xlab='acquisition', col='#6600FF')
+boxplot(revenue ~ acquisition, data=df1, ylab='revenue', xlab='acquisition', col='#9933CC')
+boxplot(employees ~ acquisition, data=df1, ylab='employees', xlab='acquisition', col='#6600FF')
+```
+```{r}
+par(mfrow=c(1,1))
+df1$acquisition <- as.factor(df1$acquisition)
+df1$industry <- as.factor(df1$industry)
+```
+We see that every one of these variables, with the exception of acq_exp_sq, will cause acquisition to flip to zero if that particular variable is equal to zero, or is negative (as in the case of profit). None of these will be in the final model. I’m going to exclude acq_exp_sq because it is merely a square of acq_exp.
+
+```{r}
+summary(df1)
+```
+Random Forest
+```{r}
+set.seed(1)
+#Create a traincontrol for model validation
+TrnCtrl <- trainControl(method = 'repeatedcv', number = 10, repeats = 2)
+```
+
+80/20
+```{r}
+set.seed(1)
+inTrain <- createDataPartition(y = df1$acquisition, p=0.8, list=FALSE)
+df1.train <- df1[inTrain, ]
+df1.test <- df1[-inTrain, ]
+```
+
+```{r}
+set.seed(1)
+RF1 <- train(acquisition ~ acq_exp + industry + revenue + employees, data = df1.train, method='rf', trControl = TrnCtrl, importance=TRUE)
+RF1$finalModel
+RF1acq.preds <- predict(RF1, df1.test)
+confusionMatrix(RF1acq.preds, df1.test$acquisition)
+```
+```{r}
+RF1acq.preds.full <- predict(RF1, df1)
+```
+
+```{r}
+df2 <- cbind(df1, RF1acq.preds.full)
+```
+
+predicted acquisitions from RF1
+```{r}
+#Need to do this with both acq.preds = 1 and acq = 1
+df3 <- subset(df2, RF1acq.preds.full == "1" & acquisition == "1")
+#new dataset
+summary(df3)
+```
+```{r}
+chart.Correlation(df3[ ,c(2:5,8,10,11,13,14)], histogram=TRUE, pch=19)
+```
+```{r}
+set.seed(1)
+glm.viftest <- glm(duration ~ profit +  acq_exp + ret_exp + freq + crossbuy + sow + industry + revenue + employees, data = df3)
+vif(glm.viftest)
+```
+Removing highest VIF, profit
+```{r}
+set.seed(1)
+glm.viftest <- glm(duration ~ acq_exp + ret_exp + freq + crossbuy + sow + industry + revenue + employees, data = df3)
+vif(glm.viftest)
+```
+```{r}
+set.seed(1)
+
+tuner <- expand.grid(mtry = c(1:10))
+
+RF2 <- rfsrc(duration ~ acq_exp + ret_exp + freq + crossbuy + sow + industry + revenue + employees, data = df3, tuneGrid = tuner, importance = TRUE, ntree = 1000)
+#gather up the predicted durations based on the RF2 regression model
+duration.preds <- predict(RF2, df3)$predicted
+#roll the duration.preds into ANOTHER dataframe
+df4 <- cbind(df3, duration.preds)
+```
+
+comparison between the actual duration and predicted durations:
+```{r}
+#Get totals for "actual" durations and predicted durations
+
+mean.actual.duration <- mean(df4$duration)
+mean.predicted.duration <- mean(df4$duration.preds)
+
+median.actual.duration <- median(df4$duration)
+median.predicted.duration <- median(df4$duration.preds)
+
+#sum.actual.duration <- sum(df4$duration) #Probably not necessary
+#sum.predicted.duration <- sum(df4$duration.preds) #Probably not necessary, 
+
+cat('Mean of actual duration: ', mean.actual.duration)
+```
+
+I
+```{r}
+cat('\nMean of predicted duration: ', mean.predicted.duration)
+```
+```{r}
+cat('\n\nMedian of actual duration: ', median.actual.duration)
+```
+The untuned random forest predictions are a little high on both mean and median, but not by much.
+
+Compute variable importance to detect interactions and optimize hyperparameters for acquired customers.
+```{r}
+var.imp <- RF2$importance
+var.imp
+```
+```{r}
+data.frame(importance = RF2$importance) %>%
+  tibble::rownames_to_column(var = "variable") %>%
+  ggplot(aes(x = reorder(variable,importance), y = importance)) +
+    geom_bar(stat = "identity", fill = "orange", color = "black")+
+    coord_flip() +
+     labs(x = "Variables", y = "Variable importance")+
+     theme_nice()
+```
+
+variables are negative, so I’m going to add a large constant to them and then take the log, and plot the results.
+
+```{r}
+log.var.imp <- log(var.imp + 200)
+log.var.imp
+```
+```{r}
+data.frame(importance = log.var.imp) %>%
+  tibble::rownames_to_column(var = "variable") %>%
+  ggplot(aes(x = reorder(variable,importance), y = importance)) +
+    geom_bar(stat = "identity", fill = "orange", color = "black")+
+    coord_flip() +
+     labs(x = "Variables", y = "Variable importance")+
+     theme_nice()
+```
+For the top four, we see ret_exp is most important, followed by freq, then employees and industry almost at the same level
+
+
+min. depth
+```{r}
+mindepth <- max.subtree(RF2, sub.order = TRUE)
+print(round(mindepth$order, 3)[,1])
+```
+```{r}
+data.frame(md = round(mindepth$order, 3)[,1]) %>%
+  tibble::rownames_to_column(var = "variable") %>%
+  ggplot(aes(x = reorder(variable,desc(md)), y = md)) +
+    geom_bar(stat = "identity", fill = "orange", color = "black", width = 0.2)+
+    coord_flip() +
+     labs(x = "Variables", y = "Minimal Depth")+
+     theme_nice()
+```
+
+The variable industry has the greatest minimal depth, followed by sow, then acq_exp, revenue, crossbuy, employees, freq and finally ret_exp.
+
+```{r}
+mindepth$sub.order
+```
+```{r}
+as.matrix(mindepth$sub.order) %>%
+  reshape2::melt() %>%
+  data.frame() %>%
+  ggplot(aes(x = Var1, y = Var2, fill = value)) +
+    scale_x_discrete(position = "top") +
+    geom_tile(color = "white") +
+    viridis::scale_fill_viridis("Relative min. depth") +
+    labs(x = "Model Variables", y = "Model Variables") +
+    theme_bw()
+```
+
+The variable industry clearly has the greatest relative minimum depth across all the other variables. The variable that has the smallest relative minimum depth is ret_exp.
+
+And running a cross-check with variable importance.
+
+```{r}
+find.interaction(RF2, method = "vimp", importance = "permute")
+```
+Finally, tuning the hyper parameters on the RFSRC model predicting duration for customers already acquired
+
+```{r}
+set.seed(1)
+# Establish a list of possible values for hyper-parameters
+mtry.values <- seq(2,6,1)
+nodesize.values <- seq(2,8,2)
+ntree.values <- seq(1e3,6e3,500)
+
+# Create a data frame containing all combinations 
+hyper_grid <- expand.grid(mtry = mtry.values, nodesize = nodesize.values, ntree = ntree.values)
+
+# Create an empty vector to store OOB error values
+oob_err <- c()
+
+# Write a loop over the rows of hyper_grid to train the grid of models
+for (i in 1:nrow(hyper_grid)) {
+
+    # Train a Random Forest model
+   model <- rfsrc(duration ~ acq_exp +
+                    ret_exp +
+                    freq +
+                    crossbuy +
+                    sow +
+                    industry +
+                    revenue +
+                    employees,
+                    data = df3,
+                    mtry = hyper_grid$mtry[i],
+                    nodesize = hyper_grid$nodesize[i],
+                    ntree = hyper_grid$ntree[i])  
+  
+                          
+    # Store OOB error for the model                      
+    oob_err[i] <- model$err.rate[length(model$err.rate)]
+}
+
+# Identify optimal set of hyperparmeters based on OOB error
+opt_i <- which.min(oob_err)
+print(hyper_grid[opt_i,])
+```
+
+```{r}
+set.seed(1)
+
+RF2.tuned <- rfsrc(duration ~ acq_exp + ret_exp + freq + crossbuy + sow + industry + revenue + employees, data = df4, mtry = 6, nodesize = 2, ntree = 2500, importance = TRUE)
+#gather up the predicted durations based on the RF2.tuned regression model
+duration.preds.tuned <- predict(RF2.tuned, df4)$predicted
+#roll the duration.preds into yet ANOTHER dataframe, df5 this time, for the tuned model
+df5 <- cbind(df4, duration.preds.tuned)
+
+#Now let us compare the performance of the standard vs. tuned random forest regression predictions
+
+#compare the mean values
+mean.actual.duration <- mean(df5$duration)
+mean.predicted.duration <- mean(df5$duration.preds)
+mean.predicted.duration.tuned <- mean(df5$duration.preds.tuned)
+
+#compare the median values
+median.actual.duration <- median(df5$duration)
+median.predicted.duration <- median(df5$duration.preds)
+median.predicted.duration.tuned <- median(df5$duration.preds.tuned)
+
+#compare the MSE values
+MSE.predicted.duration <- mean((df5$duration.preds - df5$duration)^2)
+MSE.predicted.duration.tuned <- mean((df5$duration.preds.tuned - df5$duration)^2)
+
+cat('Mean of actual duration: ', mean.actual.duration)
+```
+
+```{r}
+cat('\nMean of predicted duration: ', mean.predicted.duration)
+```
+
+```{r}
+cat('\nMean of tuned predicted duration: ', mean.predicted.duration.tuned)
+```
+```{r}
+cat('\n\nMedian of actual duration: ', median.actual.duration)
+```
+
+```{r}
+cat('\nMedian of predicted duration: ', median.predicted.duration)
+```
+```{r}
+cat('\nMedian of tuned predicted duration: ', median.predicted.duration.tuned)
+```
+
+```{r}
+cat('\n\nMSE un-tuned random forest: ', MSE.predicted.duration)
+```
+
+```{r}
+cat('\nMSE tuned random forest: ', MSE.predicted.duration.tuned)
+```
+The tuned random forest model has slightly better performance than the un-tuned random forest on calculating the mean duration, but slightly worse performance when calculating median duration. The MSE of the tuned random forest model is significantly lower than the MSE of the un-tuned model.
+
+Compare the accuracy of model with a decision trees and logistic regression model for acquiring customers.
+
+First we optimize the random forest for acquisition prediction
+```{r}
+set.seed(1)
+# Establish a list of possible values for hyper-parameters
+mtry.values <- seq(2,6,1)
+nodesize.values <- seq(2,8,2)
+ntree.values <- seq(1e3,6e3,500)
+
+# Create a data frame containing all combinations 
+hyper_grid <- expand.grid(mtry = mtry.values, nodesize = nodesize.values, ntree = ntree.values)
+
+# Create an empty vector to store OOB error values
+oob_err <- c()
+
+# Write a loop over the rows of hyper_grid to train the grid of models
+for (i in 1:nrow(hyper_grid)) {
+
+    # Train a Random Forest model
+   model <- rfsrc(acquisition ~ acq_exp +
+                    industry +
+                    revenue +
+                    employees,
+                    data = df1.train,
+                    mtry = hyper_grid$mtry[i],
+                    nodesize = hyper_grid$nodesize[i],
+                    ntree = hyper_grid$ntree[i])  
+  
+                          
+    # Store OOB error for the model                      
+    oob_err[i] <- model$err.rate[length(model$err.rate)]
+}
+
+# Identify optimal set of hyperparmeters based on OOB error
+opt_i <- which.min(oob_err)
+print(hyper_grid[opt_i,])
+```
+
+
+```{r}
+RF1.tuned <- rfsrc(acquisition ~ acq_exp + industry + revenue + employees, data = df1.train, mtry = 2, nodesize = 4, ntree = 1000, importance = TRUE)
+#gather up the predicted durations based on the RF1.tuned regression model
+RF1acq.preds.tuned <- predict(RF1.tuned, df1.test)$class
+
+#Create a basic confusion matrix for the RF1 model
+RF1.confusion <- table(RF1acq.preds, df1.test$acquisition)
+#Create a basic confusion matrix for the tuned RF1 model
+RF1.confusion.tuned <- table(RF1acq.preds.tuned, df1.test$acquisition)
+```
+
+Now that we have a tuned random forest classifier, we can examine how it compares to the original, un-tuned random forest, and also a standard decision tree, as well as LOGIT model.
+```{r}
+set.seed(1)
+
+#Decision tree is first, and I am doing all of this in CARET using the same trainControl argument throughout
+DT <- train(acquisition ~ acq_exp + industry + revenue + employees, data = df1.train, method='rpart', trControl = TrnCtrl)
+DT.preds <- predict(DT, df1.test)
+DT.confusion <- table(DT.preds, df1.test$acquisition)
+
+#LOGIT model is next, also done in CARET
+GLM <- train(acquisition ~ acq_exp + industry + revenue + employees, data = df1.train, method='glm', family='binomial', trControl = TrnCtrl)
+GLM.preds <- predict(GLM, df1.test)
+GLM.confusion <- table(GLM.preds, df1.test$acquisition)
+
+#I gather up the information from the various confusion matrixes
+RF1.accuracy.tuned <- sum(diag(RF1.confusion.tuned))/sum(RF1.confusion.tuned)
+RF1.accuracy <- sum(diag(RF1.confusion))/sum(RF1.confusion)
+DT.accuracy <- sum(diag(DT.confusion))/sum(DT.confusion)
+GLM.accuracy <- sum(diag(GLM.confusion))/sum(GLM.confusion)
+
+```
+
+```{r}
+#Print out the accuracies
+cat('Accuracy of Original Classification Random Forest: ', RF1.accuracy)
+```
+
+
+```{r}
+cat('\nAccuracy of Tuned Classification Random Forest: ', RF1.accuracy.tuned)
+`````
+
+```{r}
+cat('\nAccuacy of Decision Tree Model: ', DT.accuracy)
+```
+
+```{r}
+cat('\nAccuracy of LOGIT Classification Model: ', GLM.accuracy)
+```
+n this case, we see that the tuned classification random forest model has the best performance, followed by the logistic regression model, then the decision tree, with the un-tuned random forest model coming in at the rear.
+
+GLM confusion matrix.
+
+```{r}
+GLM.confusion
+```
+DT confusion matrix.
+```{r}
+DT.confusion
+```
+RF1 confusion matrix.
+```{r}
+RF1.confusion
+```
+tuned RF1 confusion matrix
+```{r}
+RF1.confusion.tuned
+```
+decision tree
+
+```{r}
+rattle::fancyRpartPlot(DT$finalModel, sub = "Decision Tree for Predicting Acquisition")
+```
+
+GLM can tell us for interpretation purposes
+
+```{r}
+summary(GLM)
+
+```
+The p-value of acq_exp is above the selection threshold, so we fail to reject the null hypothesis. There is no significant statistical evidence that changes in acq_exp increase the odds of gaining an acquisition, holding all other variables constant.
+
+The p-value for industry is below the threshold, so we reject the null hypothesis that the coefficient is equal to zero. The odds of an acquisition are e^1.614 (5.02) times higher for a customer who is in the B2B industry compared to one who is not, when all other variables are held constant.
+
+The p-value for revenue is below the threshold, so we reject the null hypothesis that its coefficient is equal to zero. The odds of an acquisition increase by a factor of e^0.07 (1.07) for each million in annual sales revenue, holding all other variables constant.
+
+The p-value for employees is below the threshold, so we reject the null hypothesis that its coefficient is equal to zero. The odds of an acquisition increase by a factor of e^0.007 (1.007) for each additional employee in the prospect’s firm, holding all other variables constant.
+
+PDP plots for all variables
+```{r}
+plot.variable(RF1.tuned, partial=TRUE)
+```
+
+Partial dependence plots illustrate how each variable affects the model’s prediction. The idea behind how they are interpreted is similar to the interpretation of coefficients in a linear regression model.
+
+For predicted acquisition, we see that there is an inverse relationship between the probability of no acquisition and number of employees and annual sales revenue of the prospect’s firm in millions of dollars. Another way to look at it would be: holding all other variables constant, the more employees in a prospect’s firm, the higher the likelihood of acquisition. The same holds true for annual sales revenue of the prospect’s firm. We can also see that there is a “sweet spot” for acq_exp that maximizes the probability of acquisition: somewhere between 400 and 600 dollars. We also see that the probability of acquisition is highest when the customer is in the B2B industry.
+
+```{r}
+plot.variable(RF2.tuned, partial = TRUE)
+```
+
+Here we have the partial dependence plots for predicting duration. There is a direct relationship between predicted duration and ret_exp, acq_exp and sow. There is a generally inverse relation between duration and freq and employees. Predicted duration generally decreases as revenue increases, until about the 50-million dollar mark, at which point it begins to increase again. We also see an interesting dip between predicted duration and crossbuy, where duration generally increases until a crossbuy of about 10 product categories, at which point the predicted duration begins to drop off. It is difficult to determine whether there is a significant difference between industry and predicted duration, as there is a lot of overlap in predicted duration when the customer is in the B2B industry, or when the customer is not in the industry.
